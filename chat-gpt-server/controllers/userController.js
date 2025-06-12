@@ -4,7 +4,12 @@ const {
 } = require("../services/userService");
 
 exports.register = (req, res) => {
-  const { name, email } = req.body;
+  const { name, email, course } = req.body;
+
+  console.log('📝 Registration request received:');
+  console.log('  Name:', name);
+  console.log('  Email:', email);
+  console.log('  Course:', course);
 
   if (!name || !email) {
     return res.status(400).json({ error: "יש להזין שם ואימייל" });
@@ -19,13 +24,15 @@ exports.register = (req, res) => {
     id: "user_" + Math.random().toString(36).substring(2, 10),
     name,
     email,
+    course: course || 'theory', // ✅ Single course field
   };
+
+  console.log('💾 Saving user with course:', user);
 
   addUser(user);
 
   res.status(201).json({ user });
 };
-
 exports.login = (req, res) => {
   const { email } = req.body;
 

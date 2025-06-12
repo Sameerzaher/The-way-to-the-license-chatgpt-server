@@ -3,9 +3,28 @@
     "id": "user_tp8btbue",
     "name": "sameer",
     "email": "sameerzaher@gmail.com",
-    "courses": ["theory", "psychology"] 
-
-
-
+    "course":  "psychology"
+    
+  },
+  {
+    "id": "user_x1iqvrqr",
+    "name": "סמיר",
+    "email": "sameerzaher1@gmail.com"
+  },
+  {
+    "id": "user_5tzhyi5g",
+    "name": "Sameer Zaher",
+    "email": "sameer123@gmail.com"
+  },
+  {
+    "id": "user_zrhkltqg",
+    "name": "sameer134",
+    "email": "sameer@gmail.com"
+  },
+  {
+    "id": "user_hjv1l0rz",
+    "name": "sameer1223",
+    "email": "sameer321",
+    "course": "theory"
   }
 ]

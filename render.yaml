@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: chat-gpt-server
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd chat-gpt-server && npm install
+    startCommand: cd chat-gpt-server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false  # You'll need to set this in Render dashboard 

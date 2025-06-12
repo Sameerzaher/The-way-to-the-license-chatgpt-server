@@ -18,6 +18,11 @@ app.use("/answers", answerRoutes);
 app.use("/practice", practiceRoutes);
 app.use("/user", userRoutes);
 
+// Health check endpoint for Render
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "OK", message: "Server is running" });
+});
+
 console.log("✅ Routers Loaded Successfully");
 
 const PORT = process.env.PORT || 3000;
