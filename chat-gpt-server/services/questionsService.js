@@ -5,7 +5,7 @@ let cache = null;
 
 function load() {
   if (!cache) {
-    const file = path.join(__dirname, "..", "data", "gov_theory_questions_full.json");
+    const file = path.join(__dirname, "..", "data", "gov_theory_questions_full_hebrew_2.json");
     cache = JSON.parse(fs.readFileSync(file, "utf8"));
   }
   return cache;

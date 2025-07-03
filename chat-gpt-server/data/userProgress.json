@@ -1,0 +1,51 @@
+[
+  {
+    "userId": "user_tp8btbue",
+    "completedQuestions": [
+      {
+        "questionId": "0002",
+        "isCorrect": true,
+        "answeredAt": "2025-07-01T11:10:45.376Z"
+      },
+      {
+        "questionId": "0015",
+        "isCorrect": true,
+        "answeredAt": "2025-06-19T20:37:44.589Z"
+      },
+      {
+        "questionId": "0012",
+        "isCorrect": true,
+        "answeredAt": "2025-06-17T15:08:23.553Z"
+      },
+      {
+        "questionId": "0014",
+        "isCorrect": true,
+        "answeredAt": "2025-06-17T15:12:41.074Z"
+      },
+      {
+        "questionId": "0023",
+        "isCorrect": true,
+        "answeredAt": "2025-06-17T15:38:25.401Z"
+      },
+      {
+        "questionId": "0986",
+        "isCorrect": true,
+        "answeredAt": "2025-07-01T11:17:41.048Z"
+      },
+      {
+        "questionId": "0005",
+        "isCorrect": true,
+        "answeredAt": "2025-07-01T11:19:43.611Z"
+      },
+      {
+        "questionId": "0593",
+        "isCorrect": true,
+        "answeredAt": "2025-07-01T11:47:30.424Z"
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1750158118124,
+    "progressByCategory": {}
+  }
+]

@@ -6,7 +6,7 @@ function loadQuestionsForField(field) {
   const fileName =
     field === "psychology"
       ? "psychology_questions.json"
-      : "gov_theory_questions_full.json";
+      : "gov_theory_questions_full_hebrew_2.json";
   const raw = fs.readFileSync(path.join(__dirname, `../data/${fileName}`), "utf8");
   return JSON.parse(raw);
 }
