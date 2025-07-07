@@ -1,8 +1,9 @@
 const userProgressFileService = require('../services/userProgressFileService');
 const path = require("path");
+const { getQuestionsByLang } = require("../models/questionsModel");
 
 const dataDir = path.join(__dirname, "..", "data");
-const questions_he = require(path.join(dataDir, "gov_theory_questions_full_hebrew_2.json"));
+const questions_he = require(path.join(dataDir, "gov_theory_questions_with_sub_topic_final_v68.json"));
 const questions_ar = require(path.join(dataDir, "gov_theory_questions_full_arabic_2.json"));
 
 function getPoolByLang(lang) {
@@ -63,11 +64,11 @@ exports.getCategories = (req, res) => {
   
     // Get language from query parameter, default to Hebrew
     const lang = req.query.lang || "he";
-    const allQuestions = getPoolByLang(lang);
+    const pool = getQuestionsByLang(lang);
   
     // Build categories progress dynamically
     const categories = {};
-    for (const q of allQuestions) {
+    for (const q of pool) {
       if (!categories[q.subject]) categories[q.subject] = { completed: 0, total: 0 };
       categories[q.subject].total += 1;
       if (progress.completedQuestions.find(cq => cq.questionId === q.id && cq.isCorrect)) {

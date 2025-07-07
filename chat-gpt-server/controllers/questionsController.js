@@ -1,15 +1,7 @@
 const path = require("path");
 const PDFDocument = require('pdfkit');
 const puppeteer = require('puppeteer');
-
-const dataDir = path.join(__dirname, "..", "data");
-
-const questions_he = require(path.join(dataDir, "gov_theory_questions_full_hebrew_2.json"));
-const questions_ar = require(path.join(dataDir, "gov_theory_questions_full_arabic_2.json"));
-
-function getPoolByLang(lang) {
-  return (lang && lang.toLowerCase() === "ar") ? questions_ar : questions_he;
-}
+const { getQuestionsByLang } = require("../models/questionsModel");
 
 // פונקציית ניקוי אחידה
 const clean = s => s.replace(/[«»"׳״]/g, '').trim().toLowerCase();
@@ -100,15 +92,31 @@ function mapLicenseType(type) {
   return [cleaned];
 }
 
+// סינון subject משופר (case-insensitive, ללא רווחים, תווים מיוחדים)
+function cleanSubject(s) {
+  return s ? s.replace(/[«»"׳״]/g, '').trim().toLowerCase() : '';
+}
+
+// סינון subSubject משופר (case-insensitive, ללא רווחים, תווים מיוחדים)
+function cleanSubSubject(s) {
+  return s ? s.replace(/[«»"׳״]/g, '').trim().toLowerCase() : '';
+}
+
 exports.list = (req, res) => {
   const lang = req.query.lang || "he";
   const subject = req.query.subject || null;
   const subSubject = req.query.subSubject || null;
   const licenseType = req.query.licenseType || null;
 
-  let pool = getPoolByLang(lang);
-  if (subject)    pool = pool.filter(q => q.subject === subject);
-  if (subSubject) pool = pool.filter(q => q.subSubject === subSubject);
+  let pool = getQuestionsByLang(lang);
+  if (subject) {
+    const subjectCleaned = cleanSubject(subject);
+    pool = pool.filter(q => q.subject && cleanSubject(q.subject) === subjectCleaned);
+  }
+  if (subSubject) {
+    const subSubjectCleaned = cleanSubSubject(subSubject);
+    pool = pool.filter(q => q.subSubject && cleanSubSubject(q.subSubject) === subSubjectCleaned);
+  }
   if (licenseType) {
     const licenseTypeCleaned = clean(licenseType);
     const licenseTypeVariants = mapLicenseType(licenseTypeCleaned);
@@ -144,9 +152,15 @@ exports.random = (req, res) => {
   const subSubject = req.query.subSubject || null;
   const licenseType = req.query.licenseType || null;
 
-  let pool = getPoolByLang(lang);
-  if (subject)    pool = pool.filter(q => q.subject === subject);
-  if (subSubject) pool = pool.filter(q => q.subSubject === subSubject);
+  let pool = getQuestionsByLang(lang);
+  if (subject) {
+    const subjectCleaned = cleanSubject(subject);
+    pool = pool.filter(q => q.subject && cleanSubject(q.subject) === subjectCleaned);
+  }
+  if (subSubject) {
+    const subSubjectCleaned = cleanSubSubject(subSubject);
+    pool = pool.filter(q => q.subSubject && cleanSubSubject(q.subSubject) === subSubjectCleaned);
+  }
   if (licenseType) {
     const licenseTypeCleaned = clean(licenseType);
     const licenseTypeVariants = mapLicenseType(licenseTypeCleaned);
@@ -195,7 +209,7 @@ exports.byId = (req, res) => {
   const lang = req.query.lang || "he";
   const id = req.params.id;
 
-  const pool = getPoolByLang(lang);
+  let pool = getQuestionsByLang(lang); 
   const found = pool.find(q => q.id === id);
 
   if (!found) {
@@ -216,11 +230,21 @@ exports.byId = (req, res) => {
 exports.downloadPdfByLicenseType = async (req, res) => {
   const lang = req.query.lang || "he";
   const licenseType = req.query.licenseType;
+  const subject = req.query.subject || null;
+  const subSubject = req.query.subSubject || null;
   if (!licenseType) {
     return res.status(400).json({ error: "licenseType is required" });
   }
 
-  let pool = getPoolByLang(lang);
+  let pool = getQuestionsByLang(lang);
+  if (subject) {
+    const subjectCleaned = cleanSubject(subject);
+    pool = pool.filter(q => q.subject && cleanSubject(q.subject) === subjectCleaned);
+  }
+  if (subSubject) {
+    const subSubjectCleaned = cleanSubSubject(subSubject);
+    pool = pool.filter(q => q.subSubject && cleanSubSubject(q.subSubject) === subSubjectCleaned);
+  }
   const licenseTypeCleaned = licenseType ? clean(licenseType) : null;
   const licenseTypeVariants = licenseTypeCleaned ? mapLicenseType(licenseTypeCleaned) : [];
   console.log('licenseType מה-Frontend:', licenseType);
@@ -290,4 +314,20 @@ exports.downloadPdfByLicenseType = async (req, res) => {
     console.error('שגיאה ביצירת PDF:', error);
     res.status(500).json({ error: 'שגיאה ביצירת PDF' });
   }
+};
+
+// Endpoint שמחזיר את כל הנושאים הייחודיים
+exports.subjects = (req, res) => {
+  const lang = req.query.lang || "he";
+  let pool = getQuestionsByLang(lang);
+  const subjects = Array.from(new Set(pool.map(q => q.subject).filter(Boolean)));
+  res.json(subjects);
+};
+
+// Endpoint שמחזיר את כל ה-topics הייחודיים
+exports.topics = (req, res) => {
+  const lang = req.query.lang || "he";
+  let pool = getQuestionsByLang(lang);
+  const topics = Array.from(new Set(pool.map(q => q.topic).filter(Boolean)));
+  res.json(topics);
 };
