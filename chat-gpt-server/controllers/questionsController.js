@@ -112,6 +112,11 @@ function normalizeHebrew(str) {
   return s.normalize('NFKD').replace(/[\u0591-\u05C7]/g, ''); // מסיר ניקוד
 }
 
+// פונקציית ניקוי חזקה לסינון נושאים ותתי-נושאים
+function normalizeFilter(str) {
+  return (str || '').replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+}
+
 // Endpoint שמחזיר שאלות מסוננות לפי נושא, תת-נושא, ורישיון (אפשר לשלב)
 exports.list = (req, res) => {
   const lang = req.query.lang || "he";
@@ -120,20 +125,31 @@ exports.list = (req, res) => {
   const licenseType = req.query.licenseType || null;
 
   let pool = getQuestionsByLang(lang);
-  // סינון לפי נושא (topic)
+  // סינון לפי נושא (topic) עם ניקוי חכם
   if (subject) {
-    const subjectCleaned = cleanSubject(subject);
-    pool = pool.filter(q => q.topic && cleanSubject(q.topic) === subjectCleaned);
+    const subjectCleaned = normalizeFilter(subject);
+    pool = pool.filter(q => q.topic && normalizeFilter(q.topic) === subjectCleaned);
   }
-  // סינון לפי תת-נושא (sub_topic)
+  // סינון לפי תת-נושא (sub_topic) עם ניקוי חכם
   if (subSubject) {
-    const subSubjectCleaned = cleanSubSubject(subSubject);
-    pool = pool.filter(q => q.sub_topic && cleanSubSubject(q.sub_topic) === subSubjectCleaned);
+    const subSubjectCleaned = normalizeFilter(subSubject);
+    pool = pool.filter(q => q.sub_topic && normalizeFilter(q.sub_topic) === subSubjectCleaned);
   }
-  // סינון לפי סוג רישיון
+  // סינון לפי סוג רישיון עם לוגים וניקוי חזק
   if (licenseType) {
     const licenseTypeCleaned = clean(licenseType);
     const licenseTypeVariants = mapLicenseType(licenseTypeCleaned);
+    console.log('licenseType מה-Frontend:', licenseType);
+    console.log('licenseTypeCleaned:', licenseTypeCleaned);
+    console.log('licenseTypeVariants:', licenseTypeVariants);
+    // לוג סוגי רישיון קיימים
+    const allLicenseTypes = new Set();
+    pool.forEach(q => {
+      if (q.licenseTypes) {
+        q.licenseTypes.forEach(type => allLicenseTypes.add(clean(type)));
+      }
+    });
+    console.log('סוגי רישיון קיימים (אחרי clean):', Array.from(allLicenseTypes));
     pool = pool.filter(q =>
       q.licenseTypes &&
       q.licenseTypes.some(type => licenseTypeVariants.includes(clean(type)))
@@ -341,16 +357,19 @@ exports.topics = (req, res) => {
 exports.subSubjects = (req, res) => {
   const { subject, lang = 'he' } = req.query;
   const allQuestions = getQuestionsByLang(lang);
-
-  // ניקוי חכם
   const norm = s => (s || '').replace(/[«»"׳״'.,\s\-]/g, '').toLowerCase();
 
   let filteredQuestions = allQuestions;
   if (subject) {
-    const normSubject = norm(subject);
-    filteredQuestions = allQuestions.filter(q => norm(q.topic) === normSubject);
+    const subjectCleaned = norm(subject);
+    filteredQuestions = allQuestions.filter(q =>
+      (q.topic && norm(q.topic) === subjectCleaned) ||
+      (q.subject && norm(q.subject) === subjectCleaned)
+    );
   }
-  const allSubSubjects = Array.from(new Set(filteredQuestions.map(q => q.sub_topic).filter(Boolean)));
+  const allSubSubjects = Array.from(new Set(
+    filteredQuestions.map(q => q.sub_topic || q.subSubject).filter(Boolean)
+  ));
   return res.json(allSubSubjects);
 };
 
