@@ -10,6 +10,12 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Middleware to log all incoming requests
+app.use((req, res, next) => {
+  console.log('Request:', req.method, req.originalUrl);
+  next();
+});
+
 const chatRoutes     = require("./routes/chatRoutes");
 const questionRoutes = require("./routes/questionsRoutes");
 const answerRoutes   = require("./routes/answerRoutes");

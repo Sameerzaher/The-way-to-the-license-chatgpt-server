@@ -102,6 +102,17 @@ function cleanSubSubject(s) {
   return s ? s.replace(/[«»"׳״]/g, '').trim().toLowerCase() : '';
 }
 
+// פונקציית ניקוי חזקה לעברית
+function normalizeHebrew(str) {
+  if (!str) return '';
+  // המרה לאותיות רגילות (סופיות)
+  const finals = { ך: 'כ', ם: 'מ', ן: 'נ', ף: 'פ', ץ: 'צ' };
+  let s = str.replace(/[«»"׳״'.,\s\-]/g, '').toLowerCase();
+  s = s.replace(/[ךםןףץ]/g, c => finals[c] || c);
+  return s.normalize('NFKD').replace(/[\u0591-\u05C7]/g, ''); // מסיר ניקוד
+}
+
+// Endpoint שמחזיר שאלות מסוננות לפי נושא, תת-נושא, ורישיון (אפשר לשלב)
 exports.list = (req, res) => {
   const lang = req.query.lang || "he";
   const subject = req.query.subject || null;
@@ -109,37 +120,30 @@ exports.list = (req, res) => {
   const licenseType = req.query.licenseType || null;
 
   let pool = getQuestionsByLang(lang);
+  // סינון לפי נושא (topic)
   if (subject) {
     const subjectCleaned = cleanSubject(subject);
-    pool = pool.filter(q => q.subject && cleanSubject(q.subject) === subjectCleaned);
+    pool = pool.filter(q => q.topic && cleanSubject(q.topic) === subjectCleaned);
   }
+  // סינון לפי תת-נושא (sub_topic)
   if (subSubject) {
     const subSubjectCleaned = cleanSubSubject(subSubject);
-    pool = pool.filter(q => q.subSubject && cleanSubSubject(q.subSubject) === subSubjectCleaned);
+    pool = pool.filter(q => q.sub_topic && cleanSubSubject(q.sub_topic) === subSubjectCleaned);
   }
+  // סינון לפי סוג רישיון
   if (licenseType) {
     const licenseTypeCleaned = clean(licenseType);
     const licenseTypeVariants = mapLicenseType(licenseTypeCleaned);
-    console.log('licenseType מה-Frontend:', licenseType);
-    console.log('licenseTypeCleaned:', licenseTypeCleaned);
-    console.log('licenseTypeVariants:', licenseTypeVariants);
     pool = pool.filter(q =>
       q.licenseTypes &&
       q.licenseTypes.some(type => licenseTypeVariants.includes(clean(type)))
     );
-    // לוג סוגי רישיון קיימים
-    const allLicenseTypes = new Set();
-    pool.forEach(q => {
-      if (q.licenseTypes) {
-        q.licenseTypes.forEach(type => allLicenseTypes.add(clean(type)));
-      }
-    });
-    console.log('סוגי רישיון קיימים (אחרי clean):', Array.from(allLicenseTypes));
   }
 
   const result = pool.map(q => ({
     ...q,
-    licenseTypes: q.licenseTypes || []
+    licenseTypes: q.licenseTypes || [],
+    subSubject: q.sub_topic || ""
   }));
 
   return res.json(result);
@@ -199,7 +203,8 @@ exports.random = (req, res) => {
 
   const mappedResult = result.map(q => ({
     ...q,
-    licenseTypes: q.licenseTypes || []
+    licenseTypes: q.licenseTypes || [],
+    subSubject: q.sub_topic || ""
   }));
 
   return res.json(mappedResult);
@@ -209,7 +214,7 @@ exports.byId = (req, res) => {
   const lang = req.query.lang || "he";
   const id = req.params.id;
 
-  let pool = getQuestionsByLang(lang); 
+  const pool = getQuestionsByLang(lang); 
   const found = pool.find(q => q.id === id);
 
   if (!found) {
@@ -220,7 +225,8 @@ exports.byId = (req, res) => {
 
   const result = {
     ...found,
-    licenseTypes: found.licenseTypes || []
+    licenseTypes: found.licenseTypes || [],
+    subSubject: found.sub_topic || ""
   };
 
   return res.json(result);
@@ -236,7 +242,7 @@ exports.downloadPdfByLicenseType = async (req, res) => {
     return res.status(400).json({ error: "licenseType is required" });
   }
 
-  let pool = getQuestionsByLang(lang);
+  const pool = getQuestionsByLang(lang);
   if (subject) {
     const subjectCleaned = cleanSubject(subject);
     pool = pool.filter(q => q.subject && cleanSubject(q.subject) === subjectCleaned);
@@ -319,7 +325,7 @@ exports.downloadPdfByLicenseType = async (req, res) => {
 // Endpoint שמחזיר את כל הנושאים הייחודיים
 exports.subjects = (req, res) => {
   const lang = req.query.lang || "he";
-  let pool = getQuestionsByLang(lang);
+  const pool = getQuestionsByLang(lang);
   const subjects = Array.from(new Set(pool.map(q => q.subject).filter(Boolean)));
   res.json(subjects);
 };
@@ -327,7 +333,25 @@ exports.subjects = (req, res) => {
 // Endpoint שמחזיר את כל ה-topics הייחודיים
 exports.topics = (req, res) => {
   const lang = req.query.lang || "he";
-  let pool = getQuestionsByLang(lang);
+  const pool = getQuestionsByLang(lang);
   const topics = Array.from(new Set(pool.map(q => q.topic).filter(Boolean)));
   res.json(topics);
 };
+// Endpoint שמחזיר את כל תתי הנושאים הייחודיים
+exports.subSubjects = (req, res) => {
+  const { subject, lang = 'he' } = req.query;
+  const allQuestions = getQuestionsByLang(lang);
+
+  // ניקוי חכם
+  const norm = s => (s || '').replace(/[«»"׳״'.,\s\-]/g, '').toLowerCase();
+
+  let filteredQuestions = allQuestions;
+  if (subject) {
+    const normSubject = norm(subject);
+    filteredQuestions = allQuestions.filter(q => norm(q.topic) === normSubject);
+  }
+  const allSubSubjects = Array.from(new Set(filteredQuestions.map(q => q.sub_topic).filter(Boolean)));
+  return res.json(allSubSubjects);
+};
+
+

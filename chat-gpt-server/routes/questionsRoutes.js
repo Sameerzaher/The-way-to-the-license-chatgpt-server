@@ -9,7 +9,9 @@ router.get("/pdf", downloadPdfByLicenseType);
 router.get("/list", qc.list);
 router.get('/subjects', qc.subjects);
 router.get('/topics', qc.topics);
-router.get("/:id", qc.byId);           // GET /questions/:id
+router.get('/sub-subjects', qc.subSubjects);
+router.get('/:id', qc.byId);           // GET /questions/:id
+
 
 module.exports = router;
 // Compare this snippet from chat-gpt-server/routes/questionsRoutes.js:
