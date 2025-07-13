@@ -373,4 +373,26 @@ exports.subSubjects = (req, res) => {
   return res.json(allSubSubjects);
 };
 
+// Endpoint שמחזיר את מספר השאלות לכל topic (עמיד)
+exports.topicCounts = (req, res) => {
+  const lang = req.query.lang || "he";
+  const pool = getQuestionsByLang(lang);
+  const counts = {};
+  const displayNames = {};
+  const norm = s => (s || '').replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+  pool.forEach(q => {
+    const topic = q.topic || q.subject;
+    if (!topic) return;
+    const key = norm(topic);
+    counts[key] = (counts[key] || 0) + 1;
+    displayNames[key] = topic; // שמור את השם המקורי להצגה
+  });
+  // החזר אובייקט: key = שם מוצג, value = כמות
+  const result = {};
+  Object.keys(counts).forEach(key => {
+    result[displayNames[key]] = counts[key];
+  });
+  res.json(result);
+};
+
 

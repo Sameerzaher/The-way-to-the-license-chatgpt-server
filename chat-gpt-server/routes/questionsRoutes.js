@@ -10,6 +10,7 @@ router.get("/list", qc.list);
 router.get('/subjects', qc.subjects);
 router.get('/topics', qc.topics);
 router.get('/sub-subjects', qc.subSubjects);
+router.get('/counts', qc.topicCounts);
 router.get('/:id', qc.byId);           // GET /questions/:id
 
 
