@@ -13,7 +13,22 @@ function detectPracticeRequest(text) {
     "תן לי שאלות",
     "תרגול תמרורים",
     "תרגול חוקי תנועה"
-  ].some(phrase => text.includes(text.trim()));
+  ].some(phrase => text.includes(phrase.trim()));
+}
+
+function detectWelcome(text) {
+  const lowerText = text.toLowerCase();
+
+  const welcomePhrases = [
+    "hi",
+    "hello",
+    "hey",
+    "שלום",
+    "مرحبا",
+    "היי"
+  ];
+
+  return welcomePhrases.some(phrase => lowerText.includes(phrase.toLowerCase()));
 }
 
 exports.handleChat = async (req, res) => {
@@ -35,8 +50,18 @@ exports.handleChat = async (req, res) => {
 
     console.log("📌 מצב session:", session.phase);
     console.log("🧪 תשובה נבחרת:", selected);
+    console.log("request", detectPracticeRequest(trimmed));
+    console.log("in practice", inPractice);
+
+    if (detectWelcome(trimmed)){
+      console.log("welcome");
+      return res.json({
+        response: "היי, האם אתה רוצה לתרגל שאלות תיאוריתים או פסיכולוגיים היום?"
+      });
+    }
 
     if (!inPractice && detectPracticeRequest(trimmed)) {
+      console.log("not pratice with request");
       session.phase = "awaiting_topic";
       return res.json({
         response: "מה תרצה לתרגל? תוכל לבחור נושא מסוים או תרגול כללי."
@@ -44,6 +69,7 @@ exports.handleChat = async (req, res) => {
     }
 
     if (inPractice && !selected) {
+      console.log("practice without an answer");
       const reply = practiceManager.processUserMessage(userId, trimmed);
       if (reply) {
         return res.json(reply);
@@ -51,6 +77,7 @@ exports.handleChat = async (req, res) => {
     }
 
     if (session.phase === "in_practice" && selected) {
+      console.log("practice with answer");
       const reply = practiceManager.processAnswer(userId, selected);
       if (reply) {
         return res.json(reply);

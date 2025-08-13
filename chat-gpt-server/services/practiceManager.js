@@ -21,7 +21,7 @@ const options = ["א", "ב", "ג", "ד"];
 
 function initSession(userId) {
   const session = {
-    phase: "awaiting_topic",
+    phase: "awaiting_field",
     field: "theory", // ברירת מחדל – ניתן לשנות בתחילת התרגול
     topic: null,
     count: null,
@@ -44,14 +44,17 @@ function resetSession(userId) {
 }
 
 function selectQuestions(field, topic, count) {
+  console.log(field, topic, count);
   const allQuestions = allQuestionsMap[field] || [];
+  console.log("start\n\n", allQuestions, "\n\nend");
   if (!topic || topic === "כללי") {
     return [...allQuestions].sort(() => Math.random() - 0.5).slice(0, count);
   }
 
   const words = topic.toLowerCase().split(/[ ,–-]+/);
   const filtered = allQuestions.filter(q => {
-    const subject = (q.subject || "").toLowerCase();
+    console.log(q);
+    const subject = (q.topic || "").toLowerCase();
     const subSubject = (q.subSubject || "").toLowerCase();
     return words.some(word =>
       subject.includes(word) || subSubject.includes(word)
@@ -78,8 +81,16 @@ function processUserMessage(userId, message) {
   const trimmed = message.trim();
 
   // זיהוי תחום שנבחר - רק בתחילת סשן
-  if (session.phase === "awaiting_topic" && ["theory", "psychology"].includes(trimmed)) {
-    session.field = trimmed;
+  if (session.phase === "awaiting_field") {
+    if("תיאור".includes(trimmed)){
+      session.field = "theory";
+    }
+    else if("פסיכולוג".includes(trimmed)){
+      session.field = "psychology";
+    }
+    // session.field = trimmed;
+    console.log("reached the field");
+    session.phase = "awaiting_topic";
     return { response: "🔍 באיזה נושא תרצה לתרגל?" };
   }
 

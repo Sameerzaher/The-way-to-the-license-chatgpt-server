@@ -1,61 +1,334 @@
-[
-  {
+{
+  "user_tp8btbue": {
     "userId": "user_tp8btbue",
     "completedQuestions": [
       {
-        "questionId": "0002",
+        "questionId": "0534",
+        "answer": "ב",
         "isCorrect": true,
-        "answeredAt": "2025-07-08T14:46:53.516Z"
+        "answeredAt": "2025-07-13T10:01:07.712Z",
+        "responseTime": 37734,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0015",
+        "questionId": "1390",
+        "answer": "ג",
         "isCorrect": true,
-        "answeredAt": "2025-06-19T20:37:44.589Z"
+        "answeredAt": "2025-07-13T10:37:21.402Z",
+        "responseTime": 3459,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0012",
+        "questionId": "0301",
+        "answer": "ב",
         "isCorrect": true,
-        "answeredAt": "2025-06-17T15:08:23.553Z"
+        "answeredAt": "2025-07-13T10:58:49.199Z",
+        "responseTime": 2080,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0014",
+        "questionId": "0301",
+        "answer": "ג",
         "isCorrect": true,
-        "answeredAt": "2025-06-17T15:12:41.074Z"
+        "answeredAt": "2025-07-13T11:02:37.328Z",
+        "responseTime": 230209,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0023",
+        "questionId": "0402",
+        "answer": "א",
         "isCorrect": true,
-        "answeredAt": "2025-06-17T15:38:25.401Z"
+        "answeredAt": "2025-07-13T11:07:57.211Z",
+        "responseTime": 3828,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0986",
+        "questionId": "0927",
+        "answer": "ג",
         "isCorrect": true,
-        "answeredAt": "2025-07-01T11:17:41.048Z"
+        "answeredAt": "2025-07-13T11:08:24.147Z",
+        "responseTime": 7964,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0005",
+        "questionId": "1350",
+        "answer": "א",
         "isCorrect": true,
-        "answeredAt": "2025-07-08T14:03:18.365Z"
+        "answeredAt": "2025-07-13T11:17:31.461Z",
+        "responseTime": 2655,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0593",
+        "questionId": "1229",
+        "answer": "ג",
         "isCorrect": true,
-        "answeredAt": "2025-07-01T11:47:30.424Z"
+        "answeredAt": "2025-07-13T11:37:34.153Z",
+        "responseTime": 1959,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "0995",
+        "questionId": "0107",
+        "answer": "ב",
         "isCorrect": true,
-        "answeredAt": "2025-07-08T13:36:09.019Z"
+        "answeredAt": "2025-07-13T11:46:26.868Z",
+        "responseTime": 2170,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       },
       {
-        "questionId": "1638",
+        "questionId": "0781",
+        "answer": "ב",
         "isCorrect": true,
-        "answeredAt": "2025-07-08T13:37:20.749Z"
+        "answeredAt": "2025-07-13T12:02:14.747Z",
+        "responseTime": 1690,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1064",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T13:01:37.324Z",
+        "responseTime": 3731,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0662",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T13:09:10.993Z",
+        "responseTime": 2550,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0677",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T13:52:41.573Z",
+        "responseTime": 4511,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1780",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T13:53:16.442Z",
+        "responseTime": 2168,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1771",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T13:54:19.648Z",
+        "responseTime": 2954,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0582",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:06:21.733Z",
+        "responseTime": 7703,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0430",
+        "answer": "ג",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:06:45.749Z",
+        "responseTime": 3559,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0267",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:17:28.857Z",
+        "responseTime": 2153,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1622",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:18:56.939Z",
+        "responseTime": 8594,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1311",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:19:16.245Z",
+        "responseTime": 7091,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1206",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:46:37.391Z",
+        "responseTime": 62446,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0477",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T14:55:26.410Z",
+        "responseTime": 3006,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0168",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T15:06:29.806Z",
+        "responseTime": 2763,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0125",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T15:08:00.363Z",
+        "responseTime": 2918,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0001",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-07-13T15:08:48.344Z",
+        "responseTime": 3210,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1750158118124,
-    "progressByCategory": {}
+    "lastActivity": 1752419331793,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 11,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 8,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 5,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 1,
+        "total": 100
+      }
+    }
+  },
+  "user_eqbk9h46": {
+    "userId": "user_eqbk9h46",
+    "completedQuestions": [
+      {
+        "questionId": "0001",
+        "answer": "ג",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T10:49:35.648Z",
+        "responseTime": 28369,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1603",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T10:57:28.896Z",
+        "responseTime": 49521,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0002",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T11:26:01.007Z",
+        "responseTime": 27762,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1754825162489,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 2,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 1,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
   }
-]
+}
