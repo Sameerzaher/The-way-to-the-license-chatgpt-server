@@ -274,5 +274,61 @@
         "total": 100
       }
     }
+  },
+  "user_eqbk9h46": {
+    "userId": "user_eqbk9h46",
+    "completedQuestions": [
+      {
+        "questionId": "0001",
+        "answer": "ג",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T10:49:35.648Z",
+        "responseTime": 28369,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1603",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T10:57:28.896Z",
+        "responseTime": 49521,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0002",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-08-10T11:26:01.007Z",
+        "responseTime": 27762,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1754825162489,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 2,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 1,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
   }
 }
