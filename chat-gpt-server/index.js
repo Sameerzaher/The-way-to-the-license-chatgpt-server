@@ -1,3 +1,21 @@
+const path = require("path");
+const fs = require("fs");
+
+
+const questionsFilePath = path.join("data", "gov_theory_questions_full_hebrew_2.json");
+let questions = [];
+try {
+  const data = fs.readFileSync(questionsFilePath, "utf-8");
+  questions = JSON.parse(data);
+  console.log(typeof questions);
+  console.log(`Loaded ${questions.length} questions`);
+  module.exports = {
+    questions
+  };
+} catch (err) {
+  console.error("Error reading questions file:", err);
+}
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -41,9 +59,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
-
-
-
 // require("dotenv").config();
 // const express = require("express");
 // const cors = require("cors");
