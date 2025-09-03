@@ -72,9 +72,23 @@ function choose_questions_according_to_category(categories){
   return related_questions;
 }
 
+const userHistories = new Map();
+
+const MAX_MESSAGES = 80;
+
+function get_user_history(userID){
+  if(!userHistories.has(userID)){
+    const initialHistory = [];
+    userHistories.set(userID, initialHistory);
+  }
+  return userHistories.get(userID);
+}
+
 exports.handleChat = async (req, res) => {
-  let selectedQuestions = undefined;
+  let selectedQuestions = [];
   console.log("📥 בקשה נכנסת ל־/chat:", req.body);
+  let question_numbers = undefined;
+  let subject_scope = undefined;
 
   try {
     const { message, userId } = req.body;
@@ -82,7 +96,13 @@ exports.handleChat = async (req, res) => {
     if (!userId) {
       return res.status(400).json({ error: "חסר מזהה משתמש (userId)" });
     }
-
+    let user_history = get_user_history(userId);
+    // user_history.push({ role: "user", content: trimmed });
+    if (user_history.length > MAX_MESSAGES) {
+      user_history.shift();
+      user_history.shift();
+      user_history.shift();
+    }
     const trimmed = message.trim();
     const question_prompt = `
     You are an AI assistant. 
@@ -115,9 +135,15 @@ exports.handleChat = async (req, res) => {
       4 - הכרת הרכב
 
       Rules:
-      - Return only the list of category numbers in square brackets. Example: [1, 3]
-      - If no category is related, return "none".
-      - Do NOT include any explanation or extra text.
+      - Categories: list of numbers from [1, 2, 3, 4], or "none"
+      - Number of questions: integer, or "unspecified"
+
+      Return JSON only
+      Example:
+      {
+        "categories": [1, 3],
+        "num_questions": "unspecified",
+      }
       `
      
       const messages2 = [
@@ -126,12 +152,21 @@ exports.handleChat = async (req, res) => {
       ];
 
       const category_response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-5-mini",
         messages:messages2,
       });
       console.log(category_response.choices[0].message.content);
-      if(category_response.choices[0].message.content !== "none"){
-        let questions_related_to_query = choose_questions_according_to_category(JSON.parse(category_response.choices[0].message.content));
+      question_numbers = (JSON.parse(category_response.choices[0].message.content)).num_questions;
+      const categories = (JSON.parse(category_response.choices[0].message.content)).categories;
+      if(categories.length < 4 && categories.length > 0 && categories != ["none"]){
+        subject_scope = "there is some subjects that is mentioned in the query so the user defined a specific subject";
+      }
+      else{
+        subject_scope = "no subjects mentioned you need to ask the user for a subject";
+      }
+      console.log(question_numbers, subject_scope, categories);
+      if(categories.length < 4 && categories.length > 0 && categories[0] !== "none"){
+        let questions_related_to_query = choose_questions_according_to_category(categories);
         console.log(questions_related_to_query.length);
         const questionsSummary = questions_related_to_query.map(q => ({ id: q.id, type: q.topic }));
         let choosing_question_prompt = `
@@ -146,7 +181,7 @@ exports.handleChat = async (req, res) => {
           - If the user asks for "1 question" or "a single question" → return 1 ID.
           - If the user asks for "2" or "3" questions → return exactly that number of IDs.
           - If the user asks for "an exam" or "test" → return 10 random but relevant IDs (or as many as available).
-          - If the user just gives a topic without specifying number, choose 5 relevant IDs by default.
+          - If the user just gives a topic without specifying number, choose 10 relevant IDs by default.
           - Respond ONLY with a valid JSON array of numbers (e.g., [12, 34, 56]) and nothing else.
           - Return the list of IDs as a JSON array of strings, e.g., ["1167", "0467", "0611", "1565"].
 
@@ -169,36 +204,71 @@ exports.handleChat = async (req, res) => {
         const selected_ids = JSON.parse(choosing_questions_response.choices[0].message.content);
         // console.log("after");
         selectedQuestions = questions_related_to_query.filter(q => selected_ids.includes(q.id));
+        console.log("selected questions ", selectedQuestions);
       }
     };
     let examPrompt = `
-      You are an AI assistant. 
+      You are an AI assistant.
 
-      - If the user has provided questions, create a well-formatted exam 
-      that the user can read and understands 
-      imagine the user is a kid or an old man who doesnt know anything about technology:
-        - Each item must include: id, question_text, type, and 4 options (a, b, c, d).
-        - Shuffle the order of the questions randomly.
-        - Do not add explanations or extra text.
-      - If the user has NOT provided questions, just answer normally in human-readable text as you would in a chat.
+      We already analyzed the user query and extracted:
+      - question_numbers = ${question_numbers}
+      - subject_scope = ${subject_scope}
+
+      Always output the exam in a readable text format for humans, never JSON.
+
+      Formatting rules:
+      - Number each question: Q1, Q2, Q3...
+      - Write the question clearly.
+      - Provide four options labeled a), b), c), d).
+      - Group by category if categories exist.
+
+      Your task:
+
+      1. If the query is a QUESTION_REQUEST (the user is asking for practice exam questions or theory questions about road laws, signs, safety, or car knowledge):
+        - If the selected questions list is empty:
+          - First check if the user specified a category (חוקי התנועה, תמרורים, בטיחות, הכרת הרכב). 
+            - If no category was specified → ask the user which category they want to train on.  
+          - Then check if the user specified a number of questions. 
+            - If no number was given → ask the user to specify how many questions they want.  
+        - If the selected questions list is NOT empty:
+          - Return the exam following these formatting rules:
+            - Each exam item must include:
+              - id
+              - question
+              - category
+              - 4 options (a, b, c, d)
+            - Shuffle the order of the questions randomly.
+            - Do not add explanations or extra text.
+          - **If the user answers any of the questions**:
+            - Check if the answer is correct.
+            - If correct → say: “Correct ✅”.
+            - If incorrect → say: “Incorrect ❌. The correct answer is [correct option]. Explanation: [short explanation].”
+
+      2. If the query is NOT a QUESTION_REQUEST:
+        - Respond as a normal conversation (ignore exam formatting).
 
       Selected questions (if any):
       ${selectedQuestions && selectedQuestions.length > 0 
         ? JSON.stringify(selectedQuestions, null, 2) 
         : "none"}
-    `;
 
-        const messages4 = [
-          { role: "system", content: examPrompt },
-          { role: "user", content: trimmed }
-        ];
+      User Request:
+      "${trimmed}"
+      `;
+        user_history.push({ role: "system", content: examPrompt });
+        user_history.push({ role: "user", content: trimmed });
+        // const messages4 = [
+        //   { role: "system", content: examPrompt },
+        //   { role: "user", content: trimmed }
+        // ];
 
         const final_response = await openai.chat.completions.create({
-          model: "gpt-3.5-turbo",
-          messages: messages4
+          model: "gpt-4.1-mini",
+          messages: user_history
         });
         const exam = final_response.choices[0].message.content;
-        console.log(exam);
+        user_history.push({ role: "assistant", content: exam });
+        // console.log(user_history);
         res.json({ response: exam });
 
 //     const validOptions = ["א", "ב", "ג", "ד"];
