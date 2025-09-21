@@ -237,4 +237,125 @@ exports.getTopicProgress = (req, res) => {
       }
     });
   }
+};
+
+// Get wrong questions for a user
+exports.getWrongQuestions = (req, res) => {
+  const userId = req.params.userId;
+  const subject = req.query.subject;
+  const lang = req.query.lang || 'he';
+  
+  if (!userId) {
+    return res.status(400).json({ error: 'userId is required' });
+  }
+
+  try {
+    const userProgress = getUserProgress(userId);
+    const pool = getQuestionsByLang(lang);
+    
+    // Get wrong questions
+    const wrongQuestions = userProgress.completedQuestions
+      .filter(cq => cq.isCorrect === false)
+      .map(cq => {
+        const question = pool.find(q => String(q.id) === String(cq.questionId));
+        return question;
+      })
+      .filter(q => q); // Remove undefined questions
+    
+    // Filter by subject if provided
+    let filteredQuestions = wrongQuestions;
+    if (subject) {
+      const subjectCleaned = subject.replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+      filteredQuestions = wrongQuestions.filter(q => {
+        const qSubject = (q.subject || q.topic || '').replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+        return qSubject === subjectCleaned;
+      });
+    }
+    
+    console.log(`Found ${filteredQuestions.length} wrong questions for user ${userId}`);
+    res.json(filteredQuestions);
+  } catch (error) {
+    console.error('Error getting wrong questions:', error);
+    res.status(500).json({ error: 'Failed to get wrong questions' });
+  }
+};
+
+// Get completed questions for a user
+exports.getCompletedQuestions = (req, res) => {
+  const userId = req.params.userId;
+  const subject = req.query.subject;
+  const lang = req.query.lang || 'he';
+  
+  if (!userId) {
+    return res.status(400).json({ error: 'userId is required' });
+  }
+
+  try {
+    const userProgress = getUserProgress(userId);
+    const pool = getQuestionsByLang(lang);
+    
+    // Get completed questions
+    const completedQuestions = userProgress.completedQuestions
+      .filter(cq => cq.isCorrect === true)
+      .map(cq => {
+        const question = pool.find(q => String(q.id) === String(cq.questionId));
+        return question;
+      })
+      .filter(q => q); // Remove undefined questions
+    
+    // Filter by subject if provided
+    let filteredQuestions = completedQuestions;
+    if (subject) {
+      const subjectCleaned = subject.replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+      filteredQuestions = completedQuestions.filter(q => {
+        const qSubject = (q.subject || q.topic || '').replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+        return qSubject === subjectCleaned;
+      });
+    }
+    
+    console.log(`Found ${filteredQuestions.length} completed questions for user ${userId}`);
+    res.json(filteredQuestions);
+  } catch (error) {
+    console.error('Error getting completed questions:', error);
+    res.status(500).json({ error: 'Failed to get completed questions' });
+  }
+};
+
+// Get remaining questions for a user
+exports.getRemainingQuestions = (req, res) => {
+  const userId = req.params.userId;
+  const subject = req.query.subject;
+  const lang = req.query.lang || 'he';
+  
+  if (!userId) {
+    return res.status(400).json({ error: 'userId is required' });
+  }
+
+  try {
+    const userProgress = getUserProgress(userId);
+    const pool = getQuestionsByLang(lang);
+    
+    // Get all completed question IDs
+    const completedQuestionIds = new Set(
+      userProgress.completedQuestions.map(cq => String(cq.questionId))
+    );
+    
+    // Get remaining questions (not completed)
+    let remainingQuestions = pool.filter(q => !completedQuestionIds.has(String(q.id)));
+    
+    // Filter by subject if provided
+    if (subject) {
+      const subjectCleaned = subject.replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+      remainingQuestions = remainingQuestions.filter(q => {
+        const qSubject = (q.subject || q.topic || '').replace(/[«»"׳״'.,\s\-]/g, '').trim().toLowerCase();
+        return qSubject === subjectCleaned;
+      });
+    }
+    
+    console.log(`Found ${remainingQuestions.length} remaining questions for user ${userId}`);
+    res.json(remainingQuestions);
+  } catch (error) {
+    console.error('Error getting remaining questions:', error);
+    res.status(500).json({ error: 'Failed to get remaining questions' });
+  }
 }; 

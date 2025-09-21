@@ -28,4 +28,9 @@ router.post('/mark-solved', pc.markQuestionSolved);
 router.get('/user-progress', pc.getUserProgress);
 router.get('/topic-progress', pc.topicProgress);
 
+// New endpoints for filtering questions by user progress
+router.get('/:userId/wrong', pc.getWrongQuestions);
+router.get('/:userId/completed', pc.getCompletedQuestions);
+router.get('/:userId/remaining', pc.getRemainingQuestions);
+
 module.exports = router; 

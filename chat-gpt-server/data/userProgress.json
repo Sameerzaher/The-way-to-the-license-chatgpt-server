@@ -193,16 +193,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1311",
-        "answer": "ב",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T14:19:16.245Z",
-        "responseTime": 7091,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "1206",
         "answer": "ב",
         "isCorrect": true,
@@ -251,26 +241,686 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "0067",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-08-18T11:58:34.497Z",
+        "responseTime": 22268,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1279",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-09-07T10:39:13.363Z",
+        "responseTime": 32351,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0003",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-09-08T09:39:46.563Z",
+        "responseTime": 4621,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0324",
+        "answer": "בנסיעה בקטע דרך שמוצב לפניו תמרור המזהיר על ירידה מסוכנת.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:26:03.769Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0087",
+        "answer": "אסור בשום אופן לנהוג על המדרכה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:26:16.241Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1446",
+        "answer": "המרחק בין הנקודה הקיצונית שבחזית הרכב לנקודה הקיצונית שבחלקו האחורי",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:27:41.648Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1017",
+        "answer": "להגדלת צריכת השמן של המנוע.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:30:21.685Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1313",
+        "answer": "פחות מ-4.20 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:33:29.700Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1301",
+        "answer": "3.50 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:41:16.763Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0566",
+        "answer": "כניסה לדרך מהירה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:41:25.948Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0654",
+        "answer": "במשך זמן התגובה של הנהג.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:22.629Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0181",
+        "answer": "עליך לעצור רק אם כלי רכב נעים מימין, בדרך החוצה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:29.234Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0641",
+        "answer": "הרכב המסומן צריך לנסוע מצדו השמאלי של הקו הרצוף.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:38.999Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0642",
+        "answer": "עליך להאט ולעבור לצד הכביש השמאלי.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:46.947Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0365",
+        "answer": "119",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:51.096Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0653",
+        "answer": "אף לא נוסע אחד, כל עוד הוא \"נוהג חדש\".",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T09:43:54.956Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0002",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-09-09T09:56:44.673Z",
+        "responseTime": 11389,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1019",
+        "answer": "את תקינות הנורה ואת תקינות הנתיך הקשור אליה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:04:16.722Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0742",
+        "answer": "בלחיצה חזקה על דוושת הבלם.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:10:58.964Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0745",
+        "answer": "מתן אפשרות נוחה לנוסעים ברכב לצאת מן הרכב בקלות.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:11:10.820Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1015",
+        "answer": "פגיעה בראות דרך השמשה והסבת נזק לשמשה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:11:34.082Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0747",
+        "answer": "אתה חייב להיכנס לצומת באור אדום.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:14:48.287Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0744",
+        "answer": "רק בדרך עירונית.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:14:52.000Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0085",
+        "answer": "מצדו הימני של הקו.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:18:23.363Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0064",
+        "answer": "לא - רק להוראה של הצגת רישיון נהיגה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:40:24.043Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0043",
+        "answer": "בדרך בינעירונית עליך להשתמש באדם שיכוון אותך.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T10:40:28.613Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0300",
+        "answer": "המשך החזקת רישיון הנהיגה יותנה בביצוע בדיקת שכרות.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:06:41.824Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0045",
+        "answer": "כל שטח המסומן על הכביש ואסור לנסיעה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:08:56.019Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0339",
+        "answer": "שנתיים.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:09:28.206Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0149",
+        "answer": "כל שנתיים לכל רכב נוסעים פרטי, ללא הגבלת גיל הרכב.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:11:01.374Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1303",
+        "answer": "לאחר שנהג חמש שעות רצופות.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:11:29.741Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1058",
+        "answer": "התדירות שעליה ממליץ יצרן הרכב.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:24:02.035Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0751",
+        "answer": "אסור לעקוף או לנסות לעקוף בתוך המנהרה ובתחום 50 מטרים לפני ואחרי המנהרה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:30:46.784Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1567",
+        "answer": "אסור.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:32:44.506Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0998",
+        "answer": "מותר לו להמשיך בנסיעה אטית עד למוסך הקרוב.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:35:16.705Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0749",
+        "answer": "אין השפעה על שדה הראייה: שדה ראייה נוח ייווצר רק בשמירת רווח כפול מהנדרש.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:35:28.102Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0028",
+        "answer": "החוק אוסר עקיפה כזו מכל וכל.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:46:40.681Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0029",
+        "answer": "החלק הקדמי של הרכב המיועד לספיגת נזקי התנגשות במהירות נסיעה נמוכה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:46:51.940Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0165",
+        "answer": "האות יינתן רק לפני פניות ימינה או שמאלה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-09T11:48:15.689Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1310",
+        "answer": "לא יפחת מ-30,000 ק״ג.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T09:16:34.576Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0143",
+        "answer": "יש חובת האטה בדרך עירונית בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T09:16:51.693Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1311",
+        "answer": "להודיע על כך לרשות הרישוי בתוך 15 יום.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T09:17:47.362Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0077",
+        "answer": "כשהוא נוהג בשעות שבהן הראות מוגבלת ובעת סינוור.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T09:21:52.139Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0996",
+        "answer": "יבדוק את המערכת כל 24 חודשים במוסך מורשה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:02:29.305Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0993",
+        "answer": "הרכב יאבד את יכולת הבלימה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:03:52.861Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1568",
+        "answer": "מותר, אבל רק באישור מוקדם ובכתב מאת רשות הרישוי.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:04:17.183Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0397",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-09-11T11:10:15.870Z",
+        "responseTime": 9654,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0026",
+        "answer": "משקל הרכב כולל מטען ונהג.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:45:04.132Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0012",
+        "answer": "העמדת רכב לזמן כלשהו שלא לשם העלאת אנשים או הורדתם או טעינת מטען או פריקתו מיד, ללא הפסקות.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:47:26.763Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0295",
+        "answer": "אסור לחלוטין.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:49:04.289Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0025",
+        "answer": "הנפח העצמי של הרכב והמטען שהתירה רשות הרישוי.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:49:44.202Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0021",
+        "answer": "קווי העצירה בכל אחד מהכבישים הנפגשים בצומת.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:51:10.049Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0811",
+        "answer": "סכום מרחק התגובה ומרחק הבלימה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:58:30.199Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0809",
+        "answer": "אין קשר. מרחק העצירה קבוע ואינו תלוי במהירות הרכב.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T12:02:50.689Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1752",
+        "answer": "יש זכות קדימה למי שמגיע ראשון.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T20:44:27.974Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1104",
+        "answer": "לחץ מי קיטור.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T20:47:28.021Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1699",
+        "answer": "ג",
+        "isCorrect": true,
+        "answeredAt": "2025-09-16T10:00:02.820Z",
+        "responseTime": 10526,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0197",
+        "answer": "אסור, אלא אם כן סומן אחרת במפורש.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-16T10:01:06.611Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0035",
+        "answer": "מרכב שבו תא הנהג נפרד מארגז המטען.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-16T10:45:30.216Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0027",
+        "answer": "שהוא משתלב בתנועה בלי לגרום לתאונה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-16T11:26:28.214Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0617",
+        "answer": "א",
+        "isCorrect": true,
+        "answeredAt": "2025-09-16T12:09:51.304Z",
+        "responseTime": 8213,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0014",
+        "answer": "רכב הנע על ארבעה גלגלים לפחות, אופן הישיבה עליו הוא כשרגלי הנהג מצד אחד של המושב, וההיגוי בו נעשה באמצעות הגה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-17T10:21:26.646Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0011",
+        "answer": "משך הזמן שבו חייבת מערכת האורות ברכב לפעול בדרך שאינה עירונית.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-17T10:21:42.433Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0703",
+        "answer": "הרכב הפרטי האדום ייכנס ראשון (1) ואחריו האופניים (2).",
+        "isCorrect": false,
+        "answeredAt": "2025-09-17T10:22:31.181Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0034",
+        "answer": "דרך המיועדת למשחקי ילדים, להולכי רגל ולרכב, שבכניסה אליה הוצב תמרור המורה על \"רחוב משולב\".",
+        "isCorrect": false,
+        "answeredAt": "2025-09-21T08:27:20.468Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0172",
+        "answer": "1",
+        "isCorrect": false,
+        "answeredAt": "2025-09-21T08:27:51.008Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1752419331793,
+    "lastActivity": 1758443271026,
     "progressByCategory": {
       "חוקי התנועה": {
-        "completed": 11,
+        "completed": 49,
         "total": 950
       },
       "תמרורים": {
-        "completed": 8,
+        "completed": 17,
         "total": 382
       },
       "בטיחות": {
-        "completed": 5,
+        "completed": 8,
         "total": 370
       },
       "הכרת הרכב": {
-        "completed": 1,
+        "completed": 16,
         "total": 100
       }
     }
@@ -323,6 +973,210 @@
       },
       "בטיחות": {
         "completed": 1,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
+  },
+  "user_7h4zjb5u": {
+    "userId": "user_7h4zjb5u",
+    "completedQuestions": [
+      {
+        "questionId": "0193",
+        "answer": "מותר, ובלבד שהרכב יהיה בהשגחה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:24:43.232Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0287",
+        "answer": "ברכב שבו מותקן מאט מהירות חלה חובה להפעילו בכל נסיעה, גם במישור.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:25:10.415Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0192",
+        "answer": "יש לצפור ולעבור את המכשול שלפניך.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:25:40.603Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0028",
+        "answer": "רק בדרך שאינה עירונית.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:25:50.654Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0290",
+        "answer": "אחריותו מוחלטת, אלא אם כן יוכיח מי נהג ברכב באותה שעה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:26:12.162Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1757586372181,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 5,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 0,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
+  },
+  "user_g8i3x5z0": {
+    "userId": "user_g8i3x5z0",
+    "completedQuestions": [
+      {
+        "questionId": "0341",
+        "answer": "לאחר שהוכח לרשות כי שולמו כל האגרות והמסים והוסר מהרכב כל עיקול או שעבוד ואין הגבלה אחרת.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:43:14.900Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0605",
+        "answer": "מספרה של דרך מהירה.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:44:30.501Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1757587470512,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 2,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 0,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
+  },
+  "user_gv8e85k4": {
+    "userId": "user_gv8e85k4",
+    "completedQuestions": [
+      {
+        "questionId": "0091",
+        "answer": "ברכב של נכה שצוין ברישיונו כרכב רפואי מיוחד, שמשקלו הכולל המותר לא יהיה יותר מ-2,500 ק\"ג.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:59:24.944Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1302",
+        "answer": "רוחב המטען יותר מ-2.50 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T10:59:36.390Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1757588376395,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 2,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 0,
+        "total": 370
+      },
+      "הכרת הרכב": {
+        "completed": 0,
+        "total": 100
+      }
+    }
+  },
+  "user_k9jqz8fb": {
+    "userId": "user_k9jqz8fb",
+    "completedQuestions": [
+      {
+        "questionId": "0076",
+        "answer": "רק באמצעות דיבורית המאפשרת שימוש בטלפון ללא אחיזה בו.",
+        "isCorrect": false,
+        "answeredAt": "2025-09-11T11:26:48.919Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      }
+    ],
+    "completedPractices": [],
+    "totalScore": 0,
+    "lastActivity": 1757590008929,
+    "progressByCategory": {
+      "חוקי התנועה": {
+        "completed": 1,
+        "total": 950
+      },
+      "תמרורים": {
+        "completed": 0,
+        "total": 382
+      },
+      "בטיחות": {
+        "completed": 0,
         "total": 370
       },
       "הכרת הרכב": {

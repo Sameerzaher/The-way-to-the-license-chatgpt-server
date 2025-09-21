@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 
-const questionsFilePath = path.join("data", "gov_theory_questions_full_hebrew_2.json");
+const questionsFilePath = path.join(__dirname, "data", "gov_theory_questions_full_hebrew_2.json");
 let questions = [];
 try {
   const data = fs.readFileSync(questionsFilePath, "utf-8");
@@ -40,6 +40,10 @@ const answerRoutes   = require("./routes/answerRoutes");
 const practiceRoutes = require("./routes/practiceRoutes");
 const userRoutes = require("./routes/userRoutes");
 const progressRoutes = require("./routes/progressRoutes");
+const dashboardRoutes = require("./routes/dashboardRoutes");
+const notificationRoutes = require("./routes/notificationRoutes");
+const aiLearningRoutes = require("./routes/aiLearningRoutes");
+const studyPlanRoutes = require("./routes/studyPlanRoutes");
 console.log("📦 Routers Loading..");
 app.use("/chat", chatRoutes);
 app.use("/questions", questionRoutes);
@@ -47,6 +51,10 @@ app.use("/answers", answerRoutes);
 app.use("/practice", practiceRoutes);
 app.use("/user", userRoutes);
 app.use("/progress", progressRoutes);
+app.use("/dashboard", dashboardRoutes);
+app.use("/notifications", notificationRoutes);
+app.use("/ai-learning", aiLearningRoutes);
+app.use("/study-plans", studyPlanRoutes);
 
 // Health check endpoint for Render
 app.get("/health", (req, res) => {

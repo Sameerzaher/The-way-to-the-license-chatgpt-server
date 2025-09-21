@@ -22,11 +22,20 @@ exports.register = (req, res) => {
     return res.status(409).json({ error: "משתמש עם אימייל זה כבר קיים" });
   }
 
+  // Generate course dates (6 months from now)
+  const startDate = new Date();
+  const endDate = new Date();
+  endDate.setMonth(endDate.getMonth() + 6);
+
   const user = {
     id: "user_" + Math.random().toString(36).substring(2, 10),
     name,
     email,
     course: course || 'theory', // ✅ Single course field
+    courseDates: {
+      startDate: startDate.toISOString().split('T')[0], // YYYY-MM-DD format
+      endDate: endDate.toISOString().split('T')[0] // YYYY-MM-DD format
+    }
   };
 
   console.log('💾 Saving user with course:', user);

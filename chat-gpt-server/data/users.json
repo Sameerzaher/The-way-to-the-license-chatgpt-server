@@ -3,7 +3,11 @@
     "id": "user_tp8btbue",
     "name": "sameer",
     "email": "sameerzaher@gmail.com",
-    "course": "theory"
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-01-15",
+      "endDate": "2024-06-15"
+    }
   },
   {
     "id": "user_x1iqvrqr",
@@ -24,12 +28,80 @@
     "id": "user_hjv1l0rz",
     "name": "sameer1223",
     "email": "sameer321",
-    "course": "theory"
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-02-01",
+      "endDate": "2024-07-01"
+    }
   },
   {
     "id": "user_eqbk9h46",
     "name": "malek",
     "email": "malekahmad404@gmail.com",
-    "course": "theory"
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-01-20",
+      "endDate": "2024-06-20"
+    }
+  },
+  {
+    "id": "user_7h4zjb5u",
+    "name": "SZaher",
+    "email": "sameer12345@gmail.com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-31"
+    }
+  },
+  {
+    "id": "user_0owjerrx",
+    "name": "סמיר זהר",
+    "email": "sz1234@gmail.com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-12-19",
+      "endDate": "2025-06-19"
+    }
+  },
+  {
+    "id": "user_g8i3x5z0",
+    "name": "סמיר זהרר",
+    "email": "saza1234@gmail.com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-12-19",
+      "endDate": "2025-06-19"
+    }
+  },
+  {
+    "id": "user_2h2tvzfo",
+    "name": "סוסו",
+    "email": "sam12345678@gmail.com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-12-19",
+      "endDate": "2025-06-19"
+    }
+  },
+  {
+    "id": "user_gv8e85k4",
+    "name": "sam",
+    "email": "sameer123456789@gmail.com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2024-12-19",
+      "endDate": "2025-06-19"
+    }
+  },
+  {
+    "id": "user_k9jqz8fb",
+    "name": "samii",
+    "email": "sami123456@gmail/com",
+    "course": "theory",
+    "courseDates": {
+      "startDate": "2025-09-11",
+      "endDate": "2026-03-11"
+    }
   }
 ]

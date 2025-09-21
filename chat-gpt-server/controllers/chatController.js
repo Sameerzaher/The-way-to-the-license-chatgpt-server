@@ -1,6 +1,7 @@
 const practiceManager = require("../services/practiceManager");
 const openai = require("../services/openaiService");
 const { questions } = require("../index.js");
+const { getUserProgress, saveProgress } = require("../services/userProgressFileService");
 
 // function detectPracticeRequest(text) {
 //   return [
@@ -73,8 +74,133 @@ function choose_questions_according_to_category(categories){
 }
 
 const userHistories = new Map();
+const userCurrentQuestions = new Map(); // Store current questions for each user
 
 const MAX_MESSAGES = 80;
+
+// Function to detect if user's message is an answer (א, ב, ג, ד)
+function detectAnswer(text) {
+  const trimmed = text.trim();
+  const validAnswers = ["א", "ב", "ג", "ד"];
+  return validAnswers.includes(trimmed);
+}
+
+// Function to save user's answer progress
+function saveUserAnswer(userId, questionId, userAnswer, isCorrect, responseTime = 0) {
+  try {
+    const userProgress = getUserProgress(userId);
+    
+    // Check if this question was already answered
+    const existingAnswer = userProgress.completedQuestions.find(
+      q => q.questionId === questionId
+    );
+    
+    if (existingAnswer) {
+      // Update existing answer
+      existingAnswer.answer = userAnswer;
+      existingAnswer.isCorrect = isCorrect;
+      existingAnswer.answeredAt = new Date().toISOString();
+      existingAnswer.responseTime = responseTime;
+      existingAnswer.attempts = (existingAnswer.attempts || 1) + 1;
+    } else {
+      // Add new answer
+      userProgress.completedQuestions.push({
+        questionId: questionId,
+        answer: userAnswer,
+        isCorrect: isCorrect,
+        answeredAt: new Date().toISOString(),
+        responseTime: responseTime,
+        attempts: 1,
+        userNote: "",
+        hintUsed: false
+      });
+    }
+    
+    // Update last activity
+    userProgress.lastActivity = Date.now();
+    
+    // Save progress
+    saveProgress(userProgress);
+    
+    return true;
+  } catch (error) {
+    console.error("Error saving user answer:", error);
+    return false;
+  }
+}
+
+// Function to get answer status for a question
+function getQuestionAnswerStatus(userId, questionId) {
+  try {
+    const userProgress = getUserProgress(userId);
+    const existingAnswer = userProgress.completedQuestions.find(
+      q => q.questionId === questionId
+    );
+    
+    if (!existingAnswer) {
+      return { status: "not_answered", answer: null, isCorrect: null };
+    }
+    
+    return {
+      status: existingAnswer.isCorrect ? "correct" : "incorrect",
+      answer: existingAnswer.answer,
+      isCorrect: existingAnswer.isCorrect,
+      attempts: existingAnswer.attempts,
+      answeredAt: existingAnswer.answeredAt
+    };
+  } catch (error) {
+    console.error("Error getting question status:", error);
+    return { status: "not_answered", answer: null, isCorrect: null };
+  }
+}
+
+// Function to get user statistics
+function getUserStatistics(userId) {
+  try {
+    const userProgress = getUserProgress(userId);
+    const completedQuestions = userProgress.completedQuestions;
+    
+    const totalAnswered = completedQuestions.length;
+    const correctAnswers = completedQuestions.filter(q => q.isCorrect).length;
+    const incorrectAnswers = totalAnswered - correctAnswers;
+    const accuracy = totalAnswered > 0 ? Math.round((correctAnswers / totalAnswered) * 100) : 0;
+    
+    // Statistics by category
+    const categoryStats = {};
+    completedQuestions.forEach(q => {
+      // Find question in the questions array to get category
+      const question = questions.find(quest => quest.id === q.questionId);
+      if (question && question.topic) {
+        if (!categoryStats[question.topic]) {
+          categoryStats[question.topic] = { total: 0, correct: 0 };
+        }
+        categoryStats[question.topic].total++;
+        if (q.isCorrect) {
+          categoryStats[question.topic].correct++;
+        }
+      }
+    });
+    
+    return {
+      totalAnswered,
+      correctAnswers,
+      incorrectAnswers,
+      accuracy,
+      categoryStats,
+      lastActivity: userProgress.lastActivity
+    };
+  } catch (error) {
+    console.error("Error getting user statistics:", error);
+    return {
+      totalAnswered: 0,
+      correctAnswers: 0,
+      incorrectAnswers: 0,
+      accuracy: 0,
+      categoryStats: {},
+      lastActivity: null
+    };
+  }
+}
 
 function get_user_history(userID){
   if(!userHistories.has(userID)){
@@ -97,13 +223,60 @@ exports.handleChat = async (req, res) => {
       return res.status(400).json({ error: "חסר מזהה משתמש (userId)" });
     }
     let user_history = get_user_history(userId);
+    
+    const trimmed = message.trim();
+    
+    // Check if user is answering a question (א, ב, ג, ד)
+    if (detectAnswer(trimmed)) {
+      const currentQuestions = userCurrentQuestions.get(userId);
+      if (currentQuestions && currentQuestions.length > 0) {
+        // Find the most recent unanswered question
+        let targetQuestion = null;
+        for (let i = currentQuestions.length - 1; i >= 0; i--) {
+          const questionStatus = getQuestionAnswerStatus(userId, currentQuestions[i].id);
+          if (questionStatus.status === "not_answered") {
+            targetQuestion = currentQuestions[i];
+            break;
+          }
+        }
+        
+        if (targetQuestion) {
+          // Check if answer is correct
+          const correctAnswer = targetQuestion.correct_answer;
+          const isCorrect = trimmed === correctAnswer;
+          
+          // Save the answer
+          saveUserAnswer(userId, targetQuestion.id, trimmed, isCorrect);
+          
+          // Provide feedback
+          let feedback = "";
+          if (isCorrect) {
+            feedback = "✅ נכון! תשובה מצוינת!";
+          } else {
+            feedback = `❌ לא נכון. התשובה הנכונה היא ${correctAnswer}.`;
+            if (targetQuestion.explanation) {
+              feedback += ` הסבר: ${targetQuestion.explanation}`;
+            }
+          }
+          
+          return res.json({ 
+            response: feedback,
+            answerStatus: {
+              questionId: targetQuestion.id,
+              userAnswer: trimmed,
+              correctAnswer: correctAnswer,
+              isCorrect: isCorrect
+            }
+          });
+        }
+      }
+    }
     // user_history.push({ role: "user", content: trimmed });
     if (user_history.length > MAX_MESSAGES) {
       user_history.shift();
       user_history.shift();
       user_history.shift();
     }
-    const trimmed = message.trim();
     const question_prompt = `
     You are an AI assistant. 
     Your task is to classify the user's message into one of two types:
@@ -205,6 +378,9 @@ exports.handleChat = async (req, res) => {
         // console.log("after");
         selectedQuestions = questions_related_to_query.filter(q => selected_ids.includes(q.id));
         console.log("selected questions ", selectedQuestions);
+        
+        // Store current questions for this user
+        userCurrentQuestions.set(userId, selectedQuestions);
       }
     };
     let examPrompt = `
@@ -250,6 +426,19 @@ exports.handleChat = async (req, res) => {
       Selected questions (if any):
       ${selectedQuestions && selectedQuestions.length > 0 
         ? JSON.stringify(selectedQuestions, null, 2) 
+        : "none"}
+
+      Answer status for current questions:
+      ${selectedQuestions && selectedQuestions.length > 0 
+        ? selectedQuestions.map(q => {
+            const status = getQuestionAnswerStatus(userId, q.id);
+            return {
+              questionId: q.id,
+              status: status.status,
+              userAnswer: status.answer,
+              isCorrect: status.isCorrect
+            };
+          }).map(s => `Question ${s.questionId}: ${s.status}${s.userAnswer ? ` (answered: ${s.userAnswer}, correct: ${s.isCorrect})` : ''}`).join('\n')
         : "none"}
 
       User Request:
@@ -420,7 +609,43 @@ exports.handleChat = async (req, res) => {
 //     res.json({ response });
 
   } catch (err) {
-    console.error("❌ שגיאה בצ’אט:", err);
+    console.error("❌ שגיאה בצ'אט:", err);
     res.status(500).json({ error: "שגיאה בטיפול בבקשה" });
+  }
+};
+
+// New endpoint to get user statistics
+exports.getUserStats = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "חסר מזהה משתמש (userId)" });
+    }
+    
+    const stats = getUserStatistics(userId);
+    res.json(stats);
+    
+  } catch (err) {
+    console.error("❌ שגיאה בקבלת סטטיסטיקות:", err);
+    res.status(500).json({ error: "שגיאה בקבלת סטטיסטיקות" });
+  }
+};
+
+// New endpoint to get answer status for specific questions
+exports.getQuestionStatus = async (req, res) => {
+  try {
+    const { userId, questionId } = req.params;
+    
+    if (!userId || !questionId) {
+      return res.status(400).json({ error: "חסר מזהה משתמש או מזהה שאלה" });
+    }
+    
+    const status = getQuestionAnswerStatus(userId, questionId);
+    res.json(status);
+    
+  } catch (err) {
+    console.error("❌ שגיאה בקבלת סטטוס שאלה:", err);
+    res.status(500).json({ error: "שגיאה בקבלת סטטוס שאלה" });
   }
 };

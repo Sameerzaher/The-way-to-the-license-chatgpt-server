@@ -36,9 +36,22 @@ function getUserProgress(userId) {
     if (typeof data === 'object' && data !== null) {
       // Handle legacy format (array of question IDs)
       if (Array.isArray(data[userId])) {
+        // Convert legacy format to new format
+        const legacyQuestions = data[userId];
+        const completedQuestions = legacyQuestions.map(questionId => ({
+          questionId: questionId,
+          answer: '', // Unknown for legacy data
+          isCorrect: true, // Assume correct for legacy data
+          answeredAt: new Date().toISOString(),
+          responseTime: 0,
+          attempts: 1,
+          userNote: '',
+          hintUsed: false
+        }));
+        
         return {
           userId: userId,
-          completedQuestions: data[userId],
+          completedQuestions: completedQuestions,
           completedPractices: [],
           totalScore: 0,
           lastActivity: Date.now(),
