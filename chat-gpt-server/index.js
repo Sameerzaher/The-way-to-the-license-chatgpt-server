@@ -28,9 +28,41 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Middleware to log all incoming requests
+// Rate limiting middleware
+const rateLimitMap = new Map();
 app.use((req, res, next) => {
-  console.log('Request:', req.method, req.originalUrl);
+  const clientId = req.ip || 'unknown';
+  const now = Date.now();
+  const windowMs = 60000; // 1 minute
+  const maxRequests = 30; // 30 requests per minute
+  
+  if (!rateLimitMap.has(clientId)) {
+    rateLimitMap.set(clientId, { count: 1, resetTime: now + windowMs });
+    return next();
+  }
+  
+  const clientData = rateLimitMap.get(clientId);
+  
+  if (now > clientData.resetTime) {
+    clientData.count = 1;
+    clientData.resetTime = now + windowMs;
+    return next();
+  }
+  
+  if (clientData.count >= maxRequests) {
+    return res.status(429).json({ error: 'Too many requests, please try again later' });
+  }
+  
+  clientData.count++;
+  next();
+});
+
+// Middleware to log only important requests (not all)
+app.use((req, res, next) => {
+  // Log only POST requests and important GET requests
+  if (req.method === 'POST' || req.originalUrl.includes('/dashboard') || req.originalUrl.includes('/progress')) {
+    console.log('Request:', req.method, req.originalUrl);
+  }
   next();
 });
 

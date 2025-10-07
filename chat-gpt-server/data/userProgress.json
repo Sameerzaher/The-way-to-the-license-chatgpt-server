@@ -901,11 +901,21 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "0973",
+        "answer": "ג",
+        "isCorrect": true,
+        "answeredAt": "2025-09-22T11:20:57.074Z",
+        "responseTime": 15582,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1758443271026,
+    "lastActivity": 1758540059617,
     "progressByCategory": {
       "חוקי התנועה": {
         "completed": 49,
@@ -916,7 +926,7 @@
         "total": 382
       },
       "בטיחות": {
-        "completed": 8,
+        "completed": 9,
         "total": 370
       },
       "הכרת הרכב": {
