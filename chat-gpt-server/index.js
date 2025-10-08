@@ -76,6 +76,7 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const notificationRoutes = require("./routes/notificationRoutes");
 const aiLearningRoutes = require("./routes/aiLearningRoutes");
 const studyPlanRoutes = require("./routes/studyPlanRoutes");
+const examRoutes = require("./routes/examRoutes");
 console.log("📦 Routers Loading..");
 app.use("/chat", chatRoutes);
 app.use("/questions", questionRoutes);
@@ -87,6 +88,7 @@ app.use("/dashboard", dashboardRoutes);
 app.use("/notifications", notificationRoutes);
 app.use("/ai-learning", aiLearningRoutes);
 app.use("/study-plans", studyPlanRoutes);
+app.use("/exams", examRoutes);
 
 // Health check endpoint for Render
 app.get("/health", (req, res) => {

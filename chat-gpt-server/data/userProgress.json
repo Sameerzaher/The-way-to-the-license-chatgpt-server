@@ -933,6 +933,32 @@
         "completed": 16,
         "total": 100
       }
+    },
+    "exams": [
+      {
+        "examId": "exam_1759919057253_qccbq7e",
+        "examType": "theory",
+        "score": 5,
+        "passed": false,
+        "completedAt": "2025-10-08T10:24:47.493Z",
+        "accuracy": 17
+      },
+      {
+        "examId": "exam_1759919221041_1avoe2i",
+        "examType": "practice",
+        "score": 3,
+        "passed": false,
+        "completedAt": "2025-10-08T10:27:25.211Z",
+        "accuracy": 30
+      }
+    ],
+    "examStats": {
+      "totalExams": 2,
+      "passedExams": 0,
+      "failedExams": 2,
+      "averageScore": 4,
+      "bestScore": 5,
+      "lastExamDate": "2025-10-08T10:27:25.211Z"
     }
   },
   "user_eqbk9h46": {
