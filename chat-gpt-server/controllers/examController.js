@@ -11,6 +11,9 @@ const {
   getExamById
 } = require('../services/examService');
 
+const { checkAchievements, getUserAchievements, getAllAchievements, getIconName } = require('../services/achievementService');
+const { generateExamReport, generateCertificate, savePDFToFile } = require('../services/pdfService');
+
 // יצירת בחינה חדשה
 exports.createExam = (req, res) => {
   try {
@@ -268,6 +271,11 @@ exports.completeExam = (req, res) => {
 
     saveProgress(userProgress);
 
+    // בדיקת הישגים חדשים
+    console.log('🏆 Checking achievements...');
+    const achievementResult = checkAchievements(exam.userId, exam);
+    console.log(`🎯 New achievements: ${achievementResult.newAchievements.length}`);
+
     // החזרת תוצאות מפורטות
     const detailedResults = {
       examId: exam.examId,
@@ -298,7 +306,9 @@ exports.completeExam = (req, res) => {
           timeSpent: userAnswer ? userAnswer.timeSpent : 0
         };
       }),
-      categoryBreakdown: results.categoryBreakdown
+      categoryBreakdown: results.categoryBreakdown,
+      newAchievements: achievementResult.newAchievements,
+      totalAchievements: achievementResult.totalAchievements
     };
 
     console.log(`✅ Exam completed: ${exam.examId}, Score: ${exam.score}/${exam.questionCount}, Passed: ${exam.passed}`);
@@ -487,6 +497,178 @@ exports.getExamProgress = (req, res) => {
   } catch (error) {
     console.error('Error getting exam progress:', error);
     res.status(500).json({ error: 'Failed to get exam progress' });
+  }
+};
+
+// קבלת הישגי משתמש
+exports.getUserAchievements = (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    if (!userId) {
+      return res.status(400).json({ error: 'userId is required' });
+    }
+
+    const achievements = getUserAchievements(userId);
+    const allAchievements = getAllAchievements();
+    
+    // חישוב אחוז השלמה
+    const completionPercentage = Math.round((achievements.length / allAchievements.length) * 100);
+
+    res.json({
+      achievements,
+      totalAchievements: allAchievements.length,
+      unlockedAchievements: achievements.length,
+      completionPercentage,
+      allAchievements: allAchievements.map(a => ({
+        id: a.id,
+        name: a.name,
+        description: a.description,
+        icon: a.icon,
+        iconName: getIconName(a.id),
+        unlocked: achievements.some(ua => ua.id === a.id)
+      }))
+    });
+
+  } catch (error) {
+    console.error('Error getting user achievements:', error);
+    res.status(500).json({ error: 'Failed to get achievements' });
+  }
+};
+
+// יצירת דוח PDF לבחינה
+exports.generateExamPDF = async (req, res) => {
+  try {
+    const { examId } = req.params;
+    const { userId } = req.body;
+
+    if (!examId || !userId) {
+      return res.status(400).json({ error: 'examId and userId are required' });
+    }
+
+    console.log(`📄 Generating PDF for exam: ${examId}, user: ${userId}`);
+
+    // קבלת נתוני הבחינה
+    const exam = await getExamById(examId);
+    if (!exam) {
+      return res.status(404).json({ error: 'Exam not found' });
+    }
+
+    // קבלת נתוני המשתמש
+    const userProgress = getUserProgress(userId);
+    if (!userProgress) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // קבלת הישגים חדשים
+    const achievements = userProgress.achievements || [];
+
+    // יצירת דוח PDF
+    const pdfBuffer = await generateExamReport(exam, userProgress, achievements);
+
+    // הגדרת headers להורדה
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename="exam-report-${examId}.pdf"`);
+    res.setHeader('Content-Length', pdfBuffer.length);
+
+    console.log(`✅ PDF generated successfully for exam: ${examId}`);
+    res.send(pdfBuffer);
+
+  } catch (error) {
+    console.error('Error generating PDF:', error);
+    res.status(500).json({ error: 'Failed to generate PDF report' });
+  }
+};
+
+// יצירת תעודת הצלחה
+exports.generateCertificatePDF = async (req, res) => {
+  try {
+    const { examId } = req.params;
+    const { userId } = req.body;
+
+    if (!examId || !userId) {
+      return res.status(400).json({ error: 'examId and userId are required' });
+    }
+
+    console.log(`🏆 Generating certificate for exam: ${examId}, user: ${userId}`);
+
+    // קבלת נתוני הבחינה
+    const exam = await getExamById(examId);
+    if (!exam) {
+      return res.status(404).json({ error: 'Exam not found' });
+    }
+
+    // בדיקה שהבחינה עברה בהצלחה
+    if (!exam.passed) {
+      return res.status(400).json({ error: 'Certificate can only be generated for passed exams' });
+    }
+
+    // קבלת נתוני המשתמש
+    const userProgress = getUserProgress(userId);
+    if (!userProgress) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // יצירת תעודה
+    const pdfBuffer = await generateCertificate(exam, userProgress);
+
+    // הגדרת headers להורדה
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename="certificate-${examId}.pdf"`);
+    res.setHeader('Content-Length', pdfBuffer.length);
+
+    console.log(`✅ Certificate generated successfully for exam: ${examId}`);
+    res.send(pdfBuffer);
+
+  } catch (error) {
+    console.error('Error generating certificate:', error);
+    res.status(500).json({ error: 'Failed to generate certificate' });
+  }
+};
+
+// שמירת PDF לשרת ושליחת קישור
+exports.saveExamPDF = async (req, res) => {
+  try {
+    const { examId } = req.params;
+    const { userId } = req.body;
+
+    if (!examId || !userId) {
+      return res.status(400).json({ error: 'examId and userId are required' });
+    }
+
+    console.log(`💾 Saving PDF for exam: ${examId}, user: ${userId}`);
+
+    // קבלת נתוני הבחינה
+    const exam = await getExamById(examId);
+    if (!exam) {
+      return res.status(404).json({ error: 'Exam not found' });
+    }
+
+    // קבלת נתוני המשתמש
+    const userProgress = getUserProgress(userId);
+    if (!userProgress) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // יצירת דוח PDF
+    const pdfBuffer = await generateExamReport(exam, userProgress);
+
+    // שמירה לקובץ
+    const filename = `exam-report-${examId}-${Date.now()}.pdf`;
+    const filePath = await savePDFToFile(pdfBuffer, filename);
+
+    console.log(`✅ PDF saved successfully: ${filename}`);
+
+    res.json({
+      success: true,
+      filename,
+      downloadUrl: `/uploads/reports/${filename}`,
+      filePath
+    });
+
+  } catch (error) {
+    console.error('Error saving PDF:', error);
+    res.status(500).json({ error: 'Failed to save PDF' });
   }
 };
 

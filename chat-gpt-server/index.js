@@ -28,6 +28,21 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Create uploads directory if it doesn't exist
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+// Create reports subdirectory
+const reportsDir = path.join(uploadsDir, 'reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { recursive: true });
+}
+
+// Serve static files
+app.use('/uploads', express.static(uploadsDir));
+
 // Rate limiting middleware
 const rateLimitMap = new Map();
 app.use((req, res, next) => {
@@ -77,6 +92,7 @@ const notificationRoutes = require("./routes/notificationRoutes");
 const aiLearningRoutes = require("./routes/aiLearningRoutes");
 const studyPlanRoutes = require("./routes/studyPlanRoutes");
 const examRoutes = require("./routes/examRoutes");
+const errorPatternRoutes = require("./routes/errorPatternRoutes");
 console.log("📦 Routers Loading..");
 app.use("/chat", chatRoutes);
 app.use("/questions", questionRoutes);
@@ -89,6 +105,7 @@ app.use("/notifications", notificationRoutes);
 app.use("/ai-learning", aiLearningRoutes);
 app.use("/study-plans", studyPlanRoutes);
 app.use("/exams", examRoutes);
+app.use("/error-patterns", errorPatternRoutes);
 
 // Health check endpoint for Render
 app.get("/health", (req, res) => {

@@ -323,16 +323,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1301",
-        "answer": "3.50 מטרים.",
-        "isCorrect": false,
-        "answeredAt": "2025-09-09T09:41:16.763Z",
-        "responseTime": 0,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "0566",
         "answer": "כניסה לדרך מהירה.",
         "isCorrect": false,
@@ -793,16 +783,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1104",
-        "answer": "לחץ מי קיטור.",
-        "isCorrect": false,
-        "answeredAt": "2025-09-11T20:47:28.021Z",
-        "responseTime": 0,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "1699",
         "answer": "ג",
         "isCorrect": true,
@@ -911,11 +891,31 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "1104",
+        "answer": "לחץ שמן הידרולי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-09T09:58:53.107Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1301",
+        "answer": "3.50 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-09T09:59:05.256Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1758540059617,
+    "lastActivity": 1760003945270,
     "progressByCategory": {
       "חוקי התנועה": {
         "completed": 49,
@@ -950,15 +950,23 @@
         "passed": false,
         "completedAt": "2025-10-08T10:27:25.211Z",
         "accuracy": 30
+      },
+      {
+        "examId": "exam_1759926323614_lxmqude",
+        "examType": "practice",
+        "score": 1,
+        "passed": false,
+        "completedAt": "2025-10-08T12:28:50.790Z",
+        "accuracy": 10
       }
     ],
     "examStats": {
-      "totalExams": 2,
+      "totalExams": 3,
       "passedExams": 0,
-      "failedExams": 2,
-      "averageScore": 4,
+      "failedExams": 3,
+      "averageScore": 3,
       "bestScore": 5,
-      "lastExamDate": "2025-10-08T10:27:25.211Z"
+      "lastExamDate": "2025-10-08T12:28:50.790Z"
     }
   },
   "user_eqbk9h46": {
@@ -1220,5 +1228,1114 @@
         "total": 100
       }
     }
+  },
+  "demo_user_test_123": {
+    "userId": "demo_user_test_123",
+    "name": "משתמש דמו",
+    "email": "demo@example.com",
+    "answers": [
+      {
+        "questionId": "q_1",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 12,
+        "timestamp": "2025-10-03T09:18:40.107Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_2",
+        "subject": "תמרורי חובה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 20,
+        "timestamp": "2025-10-06T15:37:54.757Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_3",
+        "subject": "תאורה ואיתות",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-06T13:22:28.710Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_4",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-02T23:18:48.491Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_5",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 17,
+        "timestamp": "2025-10-05T13:49:59.589Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_6",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 14,
+        "timestamp": "2025-10-07T08:00:20.977Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_7",
+        "subject": "חניה ועצירה",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 22,
+        "timestamp": "2025-10-04T15:09:11.640Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_8",
+        "subject": "תמרורי חובה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 16,
+        "timestamp": "2025-10-02T14:00:29.754Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_9",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 16,
+        "timestamp": "2025-10-03T10:54:34.659Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_10",
+        "subject": "תמרורי אזהרה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 17,
+        "timestamp": "2025-10-07T19:17:42.878Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_11",
+        "subject": "כללי תעבורה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 18,
+        "timestamp": "2025-10-07T19:45:05.330Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_12",
+        "subject": "מהירות והתנהגות",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 11,
+        "timestamp": "2025-10-02T11:52:48.355Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_13",
+        "subject": "תמרורי אזהרה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 5,
+        "timestamp": "2025-10-03T06:35:30.903Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_14",
+        "subject": "פסיכולוגיה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-05T19:01:55.178Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_15",
+        "subject": "תמרורי חובה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-07T21:33:51.661Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_16",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 17,
+        "timestamp": "2025-10-08T15:13:22.456Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_17",
+        "subject": "מהירות והתנהגות",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 23,
+        "timestamp": "2025-10-07T08:10:28.915Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_18",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 8,
+        "timestamp": "2025-10-07T11:57:39.604Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_19",
+        "subject": "תמרורי אזהרה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 4,
+        "timestamp": "2025-10-02T10:49:43.547Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_20",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-08T00:05:26.048Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_21",
+        "subject": "תמרורי אזהרה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-07T02:20:19.798Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_22",
+        "subject": "תמרורי אזהרה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-03T22:39:06.120Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_23",
+        "subject": "חוקי זכות קדימה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 8,
+        "timestamp": "2025-10-06T14:27:42.094Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_24",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 4,
+        "timestamp": "2025-10-05T06:41:43.794Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_25",
+        "subject": "פסיכולוגיה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 14,
+        "timestamp": "2025-10-04T07:53:49.344Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_26",
+        "subject": "פסיכולוגיה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 20,
+        "timestamp": "2025-10-09T10:34:41.425Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_27",
+        "subject": "חניה ועצירה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 26,
+        "timestamp": "2025-10-05T19:17:30.619Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_28",
+        "subject": "חניה ועצירה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-06T05:45:21.364Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_29",
+        "subject": "תאורה ואיתות",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 8,
+        "timestamp": "2025-10-06T21:14:36.811Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_30",
+        "subject": "תמרורי אזהרה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 10,
+        "timestamp": "2025-10-05T12:37:27.211Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_31",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 9,
+        "timestamp": "2025-10-04T20:45:36.500Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_32",
+        "subject": "חניה ועצירה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-03T14:10:49.461Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_33",
+        "subject": "מהירות והתנהגות",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 2,
+        "timestamp": "2025-10-06T23:39:42.845Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_34",
+        "subject": "חוקי זכות קדימה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 10,
+        "timestamp": "2025-10-05T19:35:05.761Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_35",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 27,
+        "timestamp": "2025-10-03T19:41:42.665Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_36",
+        "subject": "מהירות והתנהגות",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-06T10:19:46.601Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_37",
+        "subject": "תאורה ואיתות",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-03T23:40:49.675Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_38",
+        "subject": "כללי תעבורה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 17,
+        "timestamp": "2025-10-05T04:21:35.122Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_39",
+        "subject": "כללי תעבורה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 15,
+        "timestamp": "2025-10-03T21:05:47.623Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_40",
+        "subject": "מהירות והתנהגות",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-07T01:14:35.205Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_41",
+        "subject": "תאורה ואיתות",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-04T02:00:59.647Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_42",
+        "subject": "תמרורי אזהרה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-06T13:35:12.916Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_43",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 27,
+        "timestamp": "2025-10-05T02:52:25.006Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_44",
+        "subject": "כללי תעבורה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-07T20:36:56.908Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_45",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 3,
+        "timestamp": "2025-10-03T18:06:58.611Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_46",
+        "subject": "פסיכולוגיה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 25,
+        "timestamp": "2025-10-02T18:42:38.850Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_47",
+        "subject": "תאורה ואיתות",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-07T07:42:36.205Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_48",
+        "subject": "חוקי זכות קדימה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 23,
+        "timestamp": "2025-10-03T14:22:06.418Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_49",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 14,
+        "timestamp": "2025-10-09T07:46:59.777Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_50",
+        "subject": "מהירות והתנהגות",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 17,
+        "timestamp": "2025-10-03T17:36:26.158Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_51",
+        "subject": "תמרורי אזהרה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-03T22:54:29.401Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_52",
+        "subject": "תמרורי חובה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 20,
+        "timestamp": "2025-10-05T11:10:26.972Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_53",
+        "subject": "כללי תעבורה",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 3,
+        "timestamp": "2025-10-03T21:26:45.478Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_54",
+        "subject": "כללי תעבורה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-08T00:02:24.473Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_55",
+        "subject": "תמרורי חובה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 19,
+        "timestamp": "2025-10-08T08:11:20.898Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_56",
+        "subject": "חוקי זכות קדימה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 14,
+        "timestamp": "2025-10-03T05:55:14.917Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_57",
+        "subject": "חוקי זכות קדימה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 20,
+        "timestamp": "2025-10-05T20:52:44.875Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_58",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 1,
+        "timestamp": "2025-10-09T04:05:46.140Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_59",
+        "subject": "תאורה ואיתות",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 19,
+        "timestamp": "2025-10-06T23:09:54.143Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_60",
+        "subject": "פסיכולוגיה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-07T09:05:54.339Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_61",
+        "subject": "פסיכולוגיה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 26,
+        "timestamp": "2025-10-09T07:27:24.690Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_62",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 15,
+        "timestamp": "2025-10-04T21:14:47.277Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_63",
+        "subject": "תמרורי אזהרה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 2,
+        "timestamp": "2025-10-07T05:55:39.327Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_64",
+        "subject": "תאורה ואיתות",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 27,
+        "timestamp": "2025-10-03T07:59:02.266Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_65",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 23,
+        "timestamp": "2025-10-08T16:26:52.785Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_66",
+        "subject": "חוקי זכות קדימה",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 1,
+        "timestamp": "2025-10-08T15:30:15.317Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_67",
+        "subject": "מהירות והתנהגות",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 20,
+        "timestamp": "2025-10-04T23:20:57.701Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_68",
+        "subject": "תמרורי אזהרה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-03T22:12:24.410Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_69",
+        "subject": "פסיכולוגיה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 23,
+        "timestamp": "2025-10-07T07:58:22.148Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_70",
+        "subject": "חוקי זכות קדימה",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 2,
+        "timestamp": "2025-10-08T09:39:29.238Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_71",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 16,
+        "timestamp": "2025-10-08T22:39:39.334Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_72",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 18,
+        "timestamp": "2025-10-05T19:27:18.156Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_73",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 3,
+        "timestamp": "2025-10-08T02:15:05.761Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_74",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 12,
+        "timestamp": "2025-10-08T02:46:42.015Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_75",
+        "subject": "חוקי זכות קדימה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 5,
+        "timestamp": "2025-10-08T01:43:47.783Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_76",
+        "subject": "תמרורי חובה",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 24,
+        "timestamp": "2025-10-08T02:17:19.342Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_77",
+        "subject": "פסיכולוגיה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-08T03:27:15.889Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_78",
+        "subject": "חוקי זכות קדימה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 9,
+        "timestamp": "2025-10-02T18:16:44.719Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_79",
+        "subject": "תמרורי חובה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-05T02:43:49.714Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_80",
+        "subject": "פסיכולוגיה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 26,
+        "timestamp": "2025-10-05T18:42:31.360Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_81",
+        "subject": "פסיכולוגיה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 25,
+        "timestamp": "2025-10-03T12:40:52.594Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_82",
+        "subject": "מהירות והתנהגות",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 25,
+        "timestamp": "2025-10-09T08:03:21.476Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_83",
+        "subject": "מהירות והתנהגות",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 24,
+        "timestamp": "2025-10-06T11:40:57.311Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_84",
+        "subject": "כללי תעבורה",
+        "category": "כללי",
+        "isCorrect": true,
+        "timeSpent": 12,
+        "timestamp": "2025-10-04T08:05:37.746Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_85",
+        "subject": "תאורה ואיתות",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 10,
+        "timestamp": "2025-10-04T19:53:21.420Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_86",
+        "subject": "תמרורי אזהרה",
+        "category": "תמרורים",
+        "isCorrect": false,
+        "timeSpent": 20,
+        "timestamp": "2025-10-03T02:01:13.107Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_87",
+        "subject": "חוקי זכות קדימה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 4,
+        "timestamp": "2025-10-05T02:07:30.927Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_88",
+        "subject": "תמרורי חובה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-06T02:30:23.235Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_89",
+        "subject": "תאורה ואיתות",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 8,
+        "timestamp": "2025-10-08T13:20:54.501Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_90",
+        "subject": "חניה ועצירה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-06T07:31:24.947Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_91",
+        "subject": "פסיכולוגיה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 13,
+        "timestamp": "2025-10-09T00:43:35.624Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_92",
+        "subject": "כללי תעבורה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 11,
+        "timestamp": "2025-10-07T13:27:15.207Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_93",
+        "subject": "תמרורי אזהרה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 22,
+        "timestamp": "2025-10-09T08:10:38.561Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_94",
+        "subject": "חוקי זכות קדימה",
+        "category": "תמרורים",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-06T22:09:51.753Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_95",
+        "subject": "תמרורי חובה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 9,
+        "timestamp": "2025-10-08T22:26:05.788Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_96",
+        "subject": "חניה ועצירה",
+        "category": "חוקי תעבורה",
+        "isCorrect": true,
+        "timeSpent": 15,
+        "timestamp": "2025-10-03T03:53:53.140Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_97",
+        "subject": "חוקי זכות קדימה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 21,
+        "timestamp": "2025-10-04T15:58:03.909Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_98",
+        "subject": "חניה ועצירה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 14,
+        "timestamp": "2025-10-04T22:28:15.716Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_99",
+        "subject": "תמרורי חובה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 10,
+        "timestamp": "2025-10-08T21:33:21.146Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_100",
+        "subject": "תמרורי חובה",
+        "category": "פסיכולוגיה",
+        "isCorrect": true,
+        "timeSpent": 25,
+        "timestamp": "2025-10-02T13:18:18.096Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_5",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 17,
+        "timestamp": "2025-10-04T13:34:28.054Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_5",
+        "subject": "חניה ועצירה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 17,
+        "timestamp": "2025-10-05T01:58:47.427Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_12",
+        "subject": "מהירות והתנהגות",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 11,
+        "timestamp": "2025-10-08T20:57:52.868Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_12",
+        "subject": "מהירות והתנהגות",
+        "category": "כללי",
+        "isCorrect": false,
+        "timeSpent": 11,
+        "timestamp": "2025-10-08T06:26:53.269Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_23",
+        "subject": "חוקי זכות קדימה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 8,
+        "timestamp": "2025-10-09T08:18:03.356Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_23",
+        "subject": "חוקי זכות קדימה",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 8,
+        "timestamp": "2025-10-09T08:38:16.036Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_45",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 3,
+        "timestamp": "2025-10-05T20:24:55.138Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_45",
+        "subject": "כללי תעבורה",
+        "category": "פסיכולוגיה",
+        "isCorrect": false,
+        "timeSpent": 3,
+        "timestamp": "2025-10-05T14:19:49.374Z",
+        "userAnswer": "B",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_67",
+        "subject": "מהירות והתנהגות",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 20,
+        "timestamp": "2025-10-08T07:45:16.244Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      },
+      {
+        "questionId": "q_67",
+        "subject": "מהירות והתנהגות",
+        "category": "חוקי תעבורה",
+        "isCorrect": false,
+        "timeSpent": 20,
+        "timestamp": "2025-10-08T08:59:25.268Z",
+        "userAnswer": "A",
+        "correctAnswer": "A"
+      }
+    ],
+    "createdAt": "2025-10-09T10:47:18.527Z",
+    "lastActivity": "2025-10-09T10:47:18.527Z"
   }
 }

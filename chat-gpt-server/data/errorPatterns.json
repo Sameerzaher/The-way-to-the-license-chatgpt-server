@@ -1,0 +1,112 @@
+{
+  "demo_user_test_123": {
+    "bySubject": {
+      "כללי תעבורה": 6,
+      "חניה ועצירה": 5,
+      "תמרורי אזהרה": 7,
+      "חוקי זכות קדימה": 8,
+      "מהירות והתנהגות": 5,
+      "תאורה ואיתות": 1,
+      "תמרורי חובה": 1
+    },
+    "byCategory": {
+      "פסיכולוגיה": 12,
+      "כללי": 6,
+      "חוקי תעבורה": 9,
+      "תמרורים": 6
+    },
+    "timeOfDay": {
+      "בוקר (6-12)": 12,
+      "ערב (18-22)": 3,
+      "צהריים (12-18)": 5,
+      "לילה (22-6)": 13
+    },
+    "questionTypes": {},
+    "repeatedErrors": [
+      {
+        "questionId": "q_23",
+        "errorCount": 3,
+        "lastError": "2025-10-06T14:27:42.094Z"
+      },
+      {
+        "questionId": "q_45",
+        "errorCount": 3,
+        "lastError": "2025-10-03T18:06:58.611Z"
+      },
+      {
+        "questionId": "q_5",
+        "errorCount": 2,
+        "lastError": "2025-10-04T13:34:28.054Z"
+      },
+      {
+        "questionId": "q_12",
+        "errorCount": 2,
+        "lastError": "2025-10-08T20:57:52.868Z"
+      },
+      {
+        "questionId": "q_67",
+        "errorCount": 2,
+        "lastError": "2025-10-08T07:45:16.244Z"
+      }
+    ],
+    "improvementAreas": [
+      {
+        "subject": "חוקי זכות קדימה",
+        "errorCount": 8,
+        "totalQuestions": 14,
+        "errorRate": "57.14"
+      },
+      {
+        "subject": "כללי תעבורה",
+        "errorCount": 6,
+        "totalQuestions": 14,
+        "errorRate": "42.86"
+      },
+      {
+        "subject": "תמרורי אזהרה",
+        "errorCount": 7,
+        "totalQuestions": 17,
+        "errorRate": "41.18"
+      },
+      {
+        "subject": "מהירות והתנהגות",
+        "errorCount": 5,
+        "totalQuestions": 13,
+        "errorRate": "38.46"
+      },
+      {
+        "subject": "חניה ועצירה",
+        "errorCount": 5,
+        "totalQuestions": 16,
+        "errorRate": "31.25"
+      }
+    ],
+    "strengths": [
+      {
+        "subject": "תמרורי חובה",
+        "correctCount": 15,
+        "successRate": "93.75"
+      },
+      {
+        "subject": "תאורה ואיתות",
+        "correctCount": 8,
+        "successRate": "88.89"
+      },
+      {
+        "subject": "פסיכולוגיה",
+        "correctCount": 11,
+        "successRate": "100.00"
+      }
+    ],
+    "statistics": {
+      "totalQuestions": 110,
+      "totalErrors": 33,
+      "errorRate": "30.00",
+      "averageTimePerQuestion": "15.95",
+      "fastErrors": 13,
+      "slowErrors": 0
+    },
+    "lastUpdated": "2025-10-09T11:36:30.083Z",
+    "analysisCount": 16
+  }
+}

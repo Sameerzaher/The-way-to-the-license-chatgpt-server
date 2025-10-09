@@ -26,5 +26,17 @@ router.get('/user/:userId/statistics', examController.getExamStatistics);
 // מחיקת בחינה (רק בחינות שלא הושלמו)
 router.delete('/:examId', examController.deleteExam);
 
+// קבלת הישגי משתמש
+router.get('/user/:userId/achievements', examController.getUserAchievements);
+
+// יצירת דוח PDF לבחינה
+router.post('/:examId/pdf', examController.generateExamPDF);
+
+// יצירת תעודת הצלחה
+router.post('/:examId/certificate', examController.generateCertificatePDF);
+
+// שמירת PDF לשרת
+router.post('/:examId/save-pdf', examController.saveExamPDF);
+
 module.exports = router;
 
