@@ -374,7 +374,17 @@ exports.handleChat = async (req, res) => {
         
         console.log(choosing_questions_response.choices[0].message.content);
         // console.log("before");
-        const selected_ids = JSON.parse(choosing_questions_response.choices[0].message.content);
+        
+        // בדיקה אם התשובה היא JSON תקין
+        let selected_ids;
+        try {
+          selected_ids = JSON.parse(choosing_questions_response.choices[0].message.content);
+        } catch (error) {
+          console.error('Error parsing JSON response:', error);
+          console.log('Response content:', choosing_questions_response.choices[0].message.content);
+          // אם יש שגיאה, נשתמש בכמה שאלות ראשונות
+          selected_ids = questions_related_to_query.slice(0, 3).map(q => q.id);
+        }
         // console.log("after");
         selectedQuestions = questions_related_to_query.filter(q => selected_ids.includes(q.id));
         console.log("selected questions ", selectedQuestions);

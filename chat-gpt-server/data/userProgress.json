@@ -63,31 +63,11 @@
         "hintUsed": false
       },
       {
-        "questionId": "1350",
-        "answer": "א",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T11:17:31.461Z",
-        "responseTime": 2655,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "1229",
         "answer": "ג",
         "isCorrect": true,
         "answeredAt": "2025-07-13T11:37:34.153Z",
         "responseTime": 1959,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
-        "questionId": "0107",
-        "answer": "ב",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T11:46:26.868Z",
-        "responseTime": 2170,
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
@@ -143,16 +123,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1771",
-        "answer": "ב",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T13:54:19.648Z",
-        "responseTime": 2954,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "0582",
         "answer": "ב",
         "isCorrect": true,
@@ -183,16 +153,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1622",
-        "answer": "ב",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T14:18:56.939Z",
-        "responseTime": 8594,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "1206",
         "answer": "ב",
         "isCorrect": true,
@@ -213,16 +173,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "0168",
-        "answer": "ב",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T15:06:29.806Z",
-        "responseTime": 2763,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "0125",
         "answer": "א",
         "isCorrect": true,
@@ -238,16 +188,6 @@
         "isCorrect": true,
         "answeredAt": "2025-07-13T15:08:48.344Z",
         "responseTime": 3210,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
-        "questionId": "0067",
-        "answer": "א",
-        "isCorrect": true,
-        "answeredAt": "2025-08-18T11:58:34.497Z",
-        "responseTime": 22268,
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
@@ -783,16 +723,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "1699",
-        "answer": "ג",
-        "isCorrect": true,
-        "answeredAt": "2025-09-16T10:00:02.820Z",
-        "responseTime": 10526,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "0197",
         "answer": "אסור, אלא אם כן סומן אחרת במפורש.",
         "isCorrect": false,
@@ -911,18 +841,408 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "0810",
+        "answer": "המרחק שעובר הרכב מהרגע שבו מגיב הנהג לסכנה ועד לרגע שהוא לוחץ על דוושת הבלמים של הרכב.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-09T12:23:08.730Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0727",
+        "answer": "הנתיב השמאלי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-09T12:23:55.432Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0347",
+        "answer": "מותר, בתנאי שיותקנו על ידי חשמלאי מוסמך.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-09T12:24:17.013Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0353",
+        "answer": "לא. חובה להתקין סל אשפה רק ברכב ציבורי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:08:00.121Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0728",
+        "answer": "שלושתם נוסעים לפי החוק.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:08:50.839Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0074",
+        "answer": "מותר, בנהיגה בשעות היום בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:09:09.596Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0962",
+        "answer": "ב",
+        "isCorrect": true,
+        "answeredAt": "2025-10-12T09:13:52.962Z",
+        "responseTime": 3127,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0668",
+        "answer": "ד",
+        "isCorrect": true,
+        "answeredAt": "2025-10-12T09:14:13.668Z",
+        "responseTime": 8846,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0015",
+        "answer": "לפי התמרור אסורה העצירה בימין הכביש וכן בשול.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:25:05.349Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0017",
+        "answer": "פרק הזמן שבין שקיעת השמש לזריחתה למחרת.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:25:17.353Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0013",
+        "answer": "הנע על ארבעה גלגלים, משקלו הכולל המותר אינו מוגבל, וההיגוי בו נעשה באמצעות כידון.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:25:57.811Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0016",
+        "answer": "כל שביל שתנועת רכב מותרת בו בכיוון אחד בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:26:06.234Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0019",
+        "answer": "השטח המתהווה על ידי פגישתם של שלושה כבישים באותו מפלס.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:26:37.069Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0022",
+        "answer": "על הנהג ועל הנוסע.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:26:44.774Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0018",
+        "answer": "מותר, תמיד לרכב נוסעים פרטי לחנות לרגע על המדרכה, כשאין מקום לחנייה בכביש.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:26:58.888Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0490",
+        "answer": "הכניסה אסורה לרכב שאינו מנועי (כביש חד-סטרי לפניך).",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:29:18.008Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1190",
+        "answer": "לא, רק בצד שמאל של הכביש.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:29:41.523Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1699",
+        "answer": "משקפת בדיוק (אינה מגדילה ואינה מקטינה) את העצמים המשתקפים בה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:37:08.503Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0067",
+        "answer": "כן, פרט להוראה המנוגדת להוראת תמרור \"עצור\".",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:37:23.426Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0168",
+        "answer": "לאותת בידך השמאלית, כפי שנקבע בחוק.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:39:08.976Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1771",
+        "answer": "5.00 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:39:50.609Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1350",
+        "answer": "רכב המשמש להובלת טובין בשכר.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:41:31.783Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0107",
+        "answer": "מכל נתיב בכביש לנתיב הימני ביותר בכביש אליו אני נכנס.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:42:29.905Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1622",
+        "answer": "באור הגבוה - לפחות 120 מטרים; באור הנמוך - לפחות 50 מטרים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:42:47.928Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0196",
+        "answer": "מותר, בתנאי שהשוליים רחבים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:49:01.864Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0486",
+        "answer": "עצור! הנסיעה מותרת רק לרכב חקלאי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:49:09.660Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0489",
+        "answer": "התרחק משפת הכביש הימנית.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:50:02.468Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0798",
+        "answer": "על כל הנמצאים בקרבת הרכב הנוסע לאחור.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:53:12.470Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0356",
+        "answer": "139",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:57:47.377Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0020",
+        "answer": "המשקל הכולל המותר של רכב משא.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T09:59:37.707Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0350",
+        "answer": "כביש שבו מותרת התנועה בכיוון אחד בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:01:31.895Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0354",
+        "answer": "מותר, להרגעת הנהג והנוסעים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:01:45.780Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0355",
+        "answer": "302",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:04:44.690Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1189",
+        "answer": "כן, בכל נסיעה – אם הוא חייב להשתמש במשקפיים, על פי רישיון נהיגה שלו.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:07:37.804Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0710",
+        "answer": "תן זכות קדימה לרוכב האופנוע (1).",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:27:17.895Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0030",
+        "answer": "המשתמש בדרך לעמידה או לריצה בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:27:34.568Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0209",
+        "answer": "מותר, בדרך עירונית בלבד.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:27:47.591Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0024",
+        "answer": "מקום שכביש ומסילת ברזל חוצים זה את זה בדרך מהירה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:28:17.619Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1135",
+        "answer": "הנהג חייב לכבות את הרמקולים רק בדרך עירונית, על פי בקשת אחד הנוסעים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:28:38.241Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1760003945270,
+    "lastActivity": 1760264918268,
     "progressByCategory": {
       "חוקי התנועה": {
-        "completed": 49,
+        "completed": 80,
         "total": 950
       },
       "תמרורים": {
-        "completed": 17,
+        "completed": 18,
         "total": 382
       },
       "בטיחות": {
@@ -958,15 +1278,39 @@
         "passed": false,
         "completedAt": "2025-10-08T12:28:50.790Z",
         "accuracy": 10
+      },
+      {
+        "examId": "exam_1760010005677_gx3mdtp",
+        "examType": "practice",
+        "score": 3,
+        "passed": false,
+        "completedAt": "2025-10-09T11:40:31.018Z",
+        "accuracy": 30
+      },
+      {
+        "examId": "exam_1760010383055_nedcjdu",
+        "examType": "practice",
+        "score": 2,
+        "passed": false,
+        "completedAt": "2025-10-09T11:46:43.623Z",
+        "accuracy": 20
+      },
+      {
+        "examId": "exam_1760011102784_iwqnfy0",
+        "examType": "practice",
+        "score": 1,
+        "passed": false,
+        "completedAt": "2025-10-09T11:58:43.389Z",
+        "accuracy": 10
       }
     ],
     "examStats": {
-      "totalExams": 3,
+      "totalExams": 6,
       "passedExams": 0,
-      "failedExams": 3,
+      "failedExams": 6,
       "averageScore": 3,
       "bestScore": 5,
-      "lastExamDate": "2025-10-08T12:28:50.790Z"
+      "lastExamDate": "2025-10-09T11:58:43.389Z"
     }
   },
   "user_eqbk9h46": {
