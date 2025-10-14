@@ -1231,14 +1231,94 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "1376",
+        "answer": "מערכת בלמים הפועלת בעת סכנה בלבד ובולמת את הרכב עד לעצירתו הסופית.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:50:06.595Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1395",
+        "answer": "בהילוך גבוה ובלחיצה רצופה על דוושת הבלם.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:50:31.379Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0088",
+        "answer": "ייסע בימין הכביש ואף בשול הדרך, אם הדבר דרוש ואפשרי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:51:09.136Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0072",
+        "answer": "אסור.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:51:28.879Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1394",
+        "answer": "בעל השליטה ברכב אינו אחראי לשעות העבודה והמנוחה של הנוהג בו. האחריות כולה חלה על הנהג.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:52:40.323Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0114",
+        "answer": "מנתיב 1 או מנתיב 2 לנתיב 3 או לנתיב 4.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:53:10.469Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1396",
+        "answer": "בכל ירידה בכביש.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:55:03.560Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "1377",
+        "answer": "מתקן במערכת הבלמים המפעיל בלימה על כל גלגל באופן עצמאי בעת החלקה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-12T10:55:39.752Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1760264918268,
+    "lastActivity": 1760266539777,
     "progressByCategory": {
       "חוקי התנועה": {
-        "completed": 80,
+        "completed": 88,
         "total": 950
       },
       "תמרורים": {
