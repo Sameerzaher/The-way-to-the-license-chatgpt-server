@@ -21,9 +21,9 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const allowedOrigin = "http://localhost:3001";
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 app.use(cors({
-  origin: allowedOrigin,
+  origin: allowedOrigins,
   credentials: true,
 }));
 app.use(express.json());
@@ -93,9 +93,11 @@ const aiLearningRoutes = require("./routes/aiLearningRoutes");
 const studyPlanRoutes = require("./routes/studyPlanRoutes");
 const examRoutes = require("./routes/examRoutes");
 const errorPatternRoutes = require("./routes/errorPatternRoutes");
+const governmentQuestionsRoutes = require("./routes/governmentQuestionsRoutes");
 console.log("📦 Routers Loading..");
 app.use("/chat", chatRoutes);
 app.use("/questions", questionRoutes);
+app.use("/api", governmentQuestionsRoutes);
 app.use("/answers", answerRoutes);
 app.use("/practice", practiceRoutes);
 app.use("/user", userRoutes);

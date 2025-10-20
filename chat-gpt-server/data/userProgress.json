@@ -173,16 +173,6 @@
         "hintUsed": false
       },
       {
-        "questionId": "0125",
-        "answer": "א",
-        "isCorrect": true,
-        "answeredAt": "2025-07-13T15:08:00.363Z",
-        "responseTime": 2918,
-        "attempts": 1,
-        "userNote": "",
-        "hintUsed": false
-      },
-      {
         "questionId": "0001",
         "answer": "א",
         "isCorrect": true,
@@ -1311,18 +1301,148 @@
         "attempts": 1,
         "userNote": "",
         "hintUsed": false
+      },
+      {
+        "questionId": "0452",
+        "answer": "כאשר רואים אורות רכבת, עצור 20 מטרים לפני המפגש.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:34:30.688Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0435",
+        "answer": "המשך בנסיעתך. שים לב לתנועת כלי רכב המתמזגים משמאלך. עליהם לתת לך זכות קדימה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:34:37.275Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0446",
+        "answer": "המשך בנסיעה רגילה – לך זכות קדימה באזור החצייה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:34:46.601Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0368",
+        "answer": "135",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:35:19.283Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0453",
+        "answer": "התקרבות למפגש מסילת ברזל –  כ-100 מטרים לפני המפגש.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:35:27.351Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0419",
+        "answer": "קצה הנתיב לאופניים.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:36:08.672Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0432",
+        "answer": "המשך באותה מהירות נסיעה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:36:17.165Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0428",
+        "answer": "צומת הסתעפות. תחילה ימינה ולאחר מכן שמאלה.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:36:28.904Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0182",
+        "answer": "לפני העמוד שעליו מוצב התמרור.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:36:36.527Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0385",
+        "answer": "הגעת לקטע שבו על הרכב המהיר לנסוע בנתיב הימני, והרכב האטי חייב לנסוע בנתיב השמאלי.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:39:27.161Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0125",
+        "answer": "כן. כשאתה נוסע במהירות גבוהה יותר מהרכב האחר.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:45:10.261Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0111",
+        "answer": "מנתיב 1 לנתיב 3.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:45:21.871Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
+      },
+      {
+        "questionId": "0053",
+        "answer": "יש להחזיקם בבית, במצב נקי וניתנים לקריאה בכל עת.",
+        "isCorrect": false,
+        "answeredAt": "2025-10-14T10:45:39.937Z",
+        "responseTime": 0,
+        "attempts": 1,
+        "userNote": "",
+        "hintUsed": false
       }
     ],
     "completedPractices": [],
     "totalScore": 0,
-    "lastActivity": 1760266539777,
+    "lastActivity": 1760438739955,
     "progressByCategory": {
       "חוקי התנועה": {
-        "completed": 88,
+        "completed": 90,
         "total": 950
       },
       "תמרורים": {
-        "completed": 18,
+        "completed": 28,
         "total": 382
       },
       "בטיחות": {
@@ -1382,15 +1502,23 @@
         "passed": false,
         "completedAt": "2025-10-09T11:58:43.389Z",
         "accuracy": 10
+      },
+      {
+        "examId": "exam_1760439695664_wx8js4t",
+        "examType": "practice",
+        "score": 4,
+        "passed": false,
+        "completedAt": "2025-10-14T11:01:59.255Z",
+        "accuracy": 40
       }
     ],
     "examStats": {
-      "totalExams": 6,
+      "totalExams": 7,
       "passedExams": 0,
-      "failedExams": 6,
+      "failedExams": 7,
       "averageScore": 3,
       "bestScore": 5,
-      "lastExamDate": "2025-10-09T11:58:43.389Z"
+      "lastExamDate": "2025-10-14T11:01:59.255Z"
     }
   },
   "user_eqbk9h46": {

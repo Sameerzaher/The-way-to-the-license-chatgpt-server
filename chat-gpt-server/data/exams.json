@@ -1893,5 +1893,220 @@
     "unanswered": 0,
     "accuracy": 10,
     "timeSpent": 20605
+  },
+  "exam_1760439695664_wx8js4t": {
+    "examId": "exam_1760439695664_wx8js4t",
+    "userId": "user_tp8btbue",
+    "examType": "practice",
+    "lang": "he",
+    "difficulty": "all",
+    "questionCount": 10,
+    "questions": [
+      {
+        "questionId": "1647",
+        "question": "אילו נעליים מתאימות תבחר לרכיבה על אופנוע?",
+        "answers": [
+          "בחר נעליים קלות ונוחות המאפשרות גמישות ברכיבה.",
+          "אין כללים: כל נעל או סנדל נוחים טובים לתפעול האופנוע באופן בטוח.",
+          "בחר נעליים גבוהות בעלות בידוד מחום ומקור.",
+          "בחר נעליים גבוהות העשויות מחומר מסיבי העומד בפני חיכוך."
+        ],
+        "image": null,
+        "subject": "חוקי התנועה",
+        "correctAnswerIndex": 4
+      },
+      {
+        "questionId": "0590",
+        "question": "מה פירוש התמרור?",
+        "answers": [
+          "יש רק נתיב אחד בכביש שלפניך.",
+          "סע בכיוון החץ. הכניסה אסורה לאופניים.",
+          "כביש מהיר לפניך.",
+          "כניסה לכביש חד-סטרי."
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3590.jpg",
+        "subject": "תמרורים",
+        "correctAnswerIndex": 4
+      },
+      {
+        "questionId": "0835",
+        "question": "מהן הפעולות המקדימות  שנוהג ברכב חייב לבצע בעת העלייה משול הדרך אל הכביש?",
+        "answers": [
+          "הטיית הרכב למצב אלכסוני והפעלת אורות המצוקה ברכב.",
+          "מתן אות מתאים ועלייה בזמן קצר ככל האפשר.",
+          "בדיקת מצב התנועה בכביש, מתן אות מתאים ועלייה מתונה.",
+          "עלייה אלכסונית אל הכביש בזמן קצר ככל האפשר."
+        ],
+        "image": null,
+        "subject": "בטיחות",
+        "correctAnswerIndex": 3
+      },
+      {
+        "questionId": "0577",
+        "question": "מה פירוש התמרור?",
+        "answers": [
+          "מקום מעבר חצייה לרוכבי אופניים.",
+          "שביל משותף לאופניים ולהולכי רגל.",
+          "שבילים נפרדים לאופניים בדרך מהירה.",
+          "שביל לאופניים בלבד."
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3577.jpg",
+        "subject": "תמרורים",
+        "correctAnswerIndex": 4
+      },
+      {
+        "questionId": "0563",
+        "question": "האם מותר לאופניים להיכנס לדרך שבכניסה אליה מוצב התמרור?",
+        "answers": [
+          "מותר, בדרך עירונית בלבד.",
+          "מותר תמיד.",
+          "אסור.",
+          "מותר, בדרך שאינה עירונית."
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3562.jpg",
+        "subject": "תמרורים",
+        "correctAnswerIndex": 3
+      },
+      {
+        "questionId": "0053",
+        "question": "באיזה מצב יש להחזיק את מסמכי הנהג ומסמכי הרכב בזמן הנהיגה?",
+        "answers": [
+          "אין הוראה מפורשת בחוק.",
+          "עליהם להיות בכל עת ברכב, במצב נקי וניתנים לקריאה.",
+          "די שיהיו נקיים מכל כתם והתמונה בהם ברורה.",
+          "יש להחזיקם בבית, במצב נקי וניתנים לקריאה בכל עת."
+        ],
+        "image": null,
+        "subject": "חוקי התנועה",
+        "correctAnswerIndex": 2
+      },
+      {
+        "questionId": "0701",
+        "question": "אתה נוהג ברכב 3. מה יהיה סדר הכניסה של כלי רכב שהגיעו יחד לצומת שאין בו תמרורים, על פי כללי מתן זכות קדימה?",
+        "answers": [
+          "אתה תיכנס ראשון (3), משאית האשפה שנייה (1) ולבסוף הרכב הפרטי (2).",
+          "אתה תיכנס ראשון (3), הרכב הפרטי שני (2) ולבסוף משאית האשפה (1).",
+          "הרכב הפרטי ייכנס ראשון (2), אתה שני (3) ולבסוף משאית האשפה (1).",
+          "משאית האשפה תיכנס ראשונה (1), הרכב הפרטי שני (2) ולבסוף אתה (3)."
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3701.jpg",
+        "subject": "חוקי התנועה",
+        "correctAnswerIndex": 4
+      },
+      {
+        "questionId": "0895",
+        "question": "לפי התמונה שלפניך, ממה נגרם שיבוש בשדה הראייה?",
+        "answers": [
+          "השיבוש המופיע בתמונה הוא בלתי נמנע ולא חשוב ממה נגרם.",
+          "הערפל הוא הגורם לשיבוש בשדה הראייה.",
+          "שיבוש בשדה הראייה נגרם רק מסינוור של רכב אחר הנוסע ממול.",
+          "השיבוש נגרם בגלל רווח קטן מדי בין שני כלי הרכב."
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3895.jpg",
+        "subject": "בטיחות",
+        "correctAnswerIndex": 2
+      },
+      {
+        "questionId": "0897",
+        "question": "נוהג ברכב פונה ימינה והולכי רגל חוצים את נתיב נסיעתו במעבר החצייה. מה עליו לעשות?",
+        "answers": [
+          "יצפור להולכי הרגל וימשיך בנסיעתו אל תוך הצומת.",
+          "יאט ואף יעצור את רכבו, ויאפשר להולכי הרגל לחצות במעבר החצייה.",
+          "הנהג ימשיך בנסיעתו, משום שלכלי רכב עדיפות במעבר בצמתים, ולכן הולכי הרגל חייבים להמתין.",
+          "ימשיך בנסיעתו אל תוך הצומת, בלי קשר להולכי הרגל."
+        ],
+        "image": null,
+        "subject": "בטיחות",
+        "correctAnswerIndex": 2
+      },
+      {
+        "questionId": "0365",
+        "question": "איזה מן התמרורים מזהיר על צומת הסתעפות ימינה:",
+        "answers": [
+          "205",
+          "115",
+          "208",
+          "119"
+        ],
+        "image": "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3365.jpg",
+        "subject": "תמרורים",
+        "correctAnswerIndex": 2
+      }
+    ],
+    "startTime": "2025-10-14T11:01:35.664Z",
+    "duration": 900000,
+    "passingScore": 7,
+    "status": "completed",
+    "answers": [
+      {
+        "questionId": "1647",
+        "answerIndex": 0,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:40.293Z"
+      },
+      {
+        "questionId": "0590",
+        "answerIndex": 1,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:42.277Z"
+      },
+      {
+        "questionId": "0835",
+        "answerIndex": 3,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:43.443Z"
+      },
+      {
+        "questionId": "0577",
+        "answerIndex": 0,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:44.851Z"
+      },
+      {
+        "questionId": "0563",
+        "answerIndex": 3,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:47.504Z"
+      },
+      {
+        "questionId": "0053",
+        "answerIndex": 2,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:49.317Z"
+      },
+      {
+        "questionId": "0701",
+        "answerIndex": 1,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:51.402Z"
+      },
+      {
+        "questionId": "0895",
+        "answerIndex": 2,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:53.005Z"
+      },
+      {
+        "questionId": "0897",
+        "answerIndex": 3,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:55.574Z"
+      },
+      {
+        "questionId": "0365",
+        "answerIndex": 1,
+        "timeSpent": 0,
+        "answeredAt": "2025-10-14T11:01:57.842Z"
+      }
+    ],
+    "endTime": "2025-10-14T11:01:59.255Z",
+    "score": 4,
+    "passed": false,
+    "createdAt": "2025-10-14T11:01:35.664Z",
+    "correctAnswers": 4,
+    "wrongAnswers": 6,
+    "unanswered": 0,
+    "accuracy": 40,
+    "timeSpent": 23591
   }
 }
